@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -22,7 +24,7 @@
             </div>
 
             <!-- Desktop nav -->
-             <ul>
+            <ul>
                 <li class="dropdown">
                     <a href="allcoursedetail.html" class="dropbtn" title="Click Me">Course</a>
                     <div class="dropdown-content">
@@ -59,7 +61,7 @@
                                     <a href="#">Video Editor</a>
                                 </div>
                             </div>
-                            
+
                             <div class="has-submenu">
                                 <a href="#">Data <span>›</span></a>
                                 <div class="submenu">
@@ -112,8 +114,8 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="index.html">Contact</a></li>
             </ul> -->
-             <button class="theme-toggle-btn" id="themeToggle">
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+            <button class="theme-toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
             <div class="navbtn">
                 <button id="loginbtn">Login</button>
@@ -134,110 +136,110 @@
             <nav>
                 <div class="course-mobile-dropdown">
                     <h4>Course</h4>
+                    <ul>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Programming
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">C++</a></li>
+                                <li><a href="#">C#</a></li>
+                                <li><a href="#">Java Programming I</a></li>
+                                <li><a href="#">Java Programming II</a></li>
+                                <li><a href="#">Python Programming</a></li>
+                                <li><a href="#">DevOps</a></li>
+                                <li><a href="#">Project Managerment</a></li>
+                                <li><a href="#">Software Development with C++</a></li>
+                                <li><a href="#">Software Development with Java</a></li>
+                                <li><a href="#">Software Development with Python</a></li>
+                            </ul>
+                        </li>
+                        <!-- Posts (has dropdown) -->
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Website
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">Web Frontend</a></li>
+                                <li><a href="#">Web Backend</a></li>
+                                <li><a href="#">Full Stack Development</a></li>
+                                <li><a href="#">Web Backend (Node js)</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Design
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">UX/UI Design</a></li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">Video Editor</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Data Course
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">Data Managerment System</a></li>
+                                <li><a href="#">Data Analytic</a></li>
+                                <li><a href="#">Machine Learning</a></li>
+                                <li><a href="#">Deep Learning</a></li>
+                                <li><a href="#">Power BI</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Computer Office
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#">Microsoft Office</a></li>
+                                <li><a href="#">Advance Excel</a></li>
+                                <li><a href="#">Excel VBA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Computer Office
+                                <span class="arrow">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Networking CCNA</a></li>
+                                <li><a href="#">Cyber Security</a></li>
+                                <li><a href="#">Cloud Computing</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <ul>
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Programming
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#">C++</a></li>
-                    <li><a href="#">C#</a></li>
-                    <li><a href="#">Java Programming I</a></li>
-                    <li><a href="#">Java Programming II</a></li>
-                    <li><a href="#">Python Programming</a></li>
-                    <li><a href="#">DevOps</a></li>
-                    <li><a href="#">Project Managerment</a></li>
-                    <li><a href="#">Software Development with C++</a></li>
-                    <li><a href="#">Software Development with Java</a></li>
-                    <li><a href="#">Software Development with Python</a></li>
-                    </ul>
-                </li>
-                <!-- Posts (has dropdown) -->
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Website
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#">Web Frontend</a></li>
-                    <li><a href="#">Web Backend</a></li>
-                    <li><a href="#">Full Stack Development</a></li>
-                    <li><a href="#">Web Backend (Node js)</a></li>
-                    </ul>
-                </li>
+                    <li>
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
 
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Design
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#">UX/UI Design</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Video Editor</a></li>
-                    </ul>
-                </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
 
-                
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Data Course
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#">Data Managerment System</a></li>
-                    <li><a href="#">Data Analytic</a></li>
-                    <li><a href="#">Machine Learning</a></li>
-                    <li><a href="#">Deep Learning</a></li>
-                    <li><a href="#">Power BI</a></li>
-                    </ul>
-                </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
 
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Computer Office
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#">Microsoft Office</a></li>
-                    <li><a href="#">Advance Excel</a></li>
-                    <li><a href="#">Excel VBA</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="menu-item" onclick="toggleMenu(this)">
-                    Computer Office
-                    <span class="arrow">▼</span>
-                    </div>
-                    <ul class="sub-menu">
-                    <li><a href="#"></a></li>
-                    <li><a href="#">Networking CCNA</a></li>
-                    <li><a href="#">Cyber Security</a></li>
-                    <li><a href="#">Cloud Computing</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </div>
-            <ul>
-                <li>
-                    <a href="#">
-                    About
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="#">
-                    Blog
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="#">
-                    Contact
-                    </a>
-                </li>
-            
                 </ul>
             </nav>
 
@@ -262,7 +264,8 @@
             <div class="vc-overlay"></div>
             <div class="vc-caption">
                 <h2>Learn from the <em> Best Teachers</em></h2>
-                <p>We combine expert instructors, hands-on projects, and flexible schedules to help you build a real career in tech — whether you are a complete beginner or looking to level up your skills.</p>
+                <p>We combine expert instructors, hands-on projects, and flexible schedules to help you build a real
+                    career in tech — whether you are a complete beginner or looking to level up your skills.</p>
                 <div class="vc-btns">
                     <button class="vc-btn-primary">Get Started</button>
 
@@ -370,11 +373,11 @@
                     <h3>$120.00</h3>
                     <div class="starate">
                         <p>4.9</p>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
                     </div>
                 </div>
             </a>
@@ -399,11 +402,11 @@
                     <h3>$120.00</h3>
                     <div class="starate">
                         <p>4.9</p>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
                     </div>
                 </div>
             </a>
@@ -429,11 +432,11 @@
                     <h3>$120.00</h3>
                     <div class="starate">
                         <p>4.9</p>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
                     </div>
                 </div>
             </a>
@@ -459,11 +462,11 @@
                     <h3>$120.00</h3>
                     <div class="starate">
                         <p>4.9</p>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
                     </div>
                 </div>
             </a>
@@ -489,11 +492,11 @@
                     <h3>$120.00</h3>
                     <div class="starate">
                         <p>4.9</p>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
-                            <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
                     </div>
                 </div>
             </a>
@@ -501,69 +504,70 @@
         <!-- ═══ COURSE CARDS ═══ -->
         <div class="card-areaa">
             <h3 id="blogsection">About Blog Videos <span>›</span></h3>
-            <p id="blog_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id repellendus ipsa ipsam nulla. Quibusdam sint quisquam placeat.</p>
-        <div class="wrapperr">
-            <div class="box-area">
-                <div class="boxx" class="active">
-                    <img src="./asset/images/whatisweb3.jpg" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                        <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+            <p id="blog_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id repellendus
+                ipsa ipsam nulla. Quibusdam sint quisquam placeat.</p>
+            <div class="wrapperr">
+                <div class="box-area">
+                    <div class="boxx" class="active">
+                        <img src="./asset/images/whatisweb3.jpg" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/boxcourseAdvancedExcel.webp" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                        <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/boxcourseAdvancedExcel.webp" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/Blogexcel.webp" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                        <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/Blogexcel.webp" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/whatisweb3.jpg" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                         <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/whatisweb3.jpg" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/front-end-web-developer-html-css-bootstrap.png" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                         <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/front-end-web-developer-html-css-bootstrap.png" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/whatisweb3.jpg" alt="">
-                    <div class="overlay">
-                         <p>Phat Sopheaktra</p>
-                         <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/whatisweb3.jpg" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
-                <div class="boxx">
-                    <img src="./asset/images/dataanalyze.webp" alt="">
-                    <div class="overlay">
-                        <p>Phat Sopheaktra</p>
-                        <h3>What is Web Development?</h3>
-                        <!-- <a href="#">Learn More</a> -->
+                    <div class="boxx">
+                        <img src="./asset/images/dataanalyze.webp" alt="">
+                        <div class="overlay">
+                            <p>Phat Sopheaktra</p>
+                            <h3>What is Web Development?</h3>
+                            <!-- <a href="#">Learn More</a> -->
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
 
         <div class="aboutschool">
             <div class="text">
@@ -601,16 +605,17 @@
 
 
         <!-- CEO founder of ICT Solutions Co,Ltd -->
-     <div class="teacher-img-with-description">
-        <img src="./asset/images/teacherNhim.jpg" alt="">
-     
-        <div class="teacher-nhim-text-descript">
-            <p>Mr.NHANH NHIM</p>
+        <div class="teacher-img-with-description">
+            <img src="./asset/images/teacherNhim.jpg" alt="">
+
+            <div class="teacher-nhim-text-descript">
+                <p>Mr.NHANH NHIM</p>
                 <span>CEO & Founder of ICT Solutions,Co,Ltd.</span>
-            <h3>"Our mission is to empower the next generation of digital innovators with the tools they need to change the world."</h3>
-                
+                <h3>"Our mission is to empower the next generation of digital innovators with the tools they need to
+                    change the world."</h3>
+
+            </div>
         </div>
-    </div>
 
         <div class="teacherictblock">
             <p class="pt" id="pt">EXPERT INSTRUCTORS</p>
@@ -618,7 +623,8 @@
                 <i class="fa-solid fa-circle-check" style="color: #3777ff;"></i>
                 <h2>Learn From the Best</h2>
             </div>
-            <p class="pt">Our instructors are industry professionals from top companies, passionate about sharing their knowledge.</p>
+            <p class="pt">Our instructors are industry professionals from top companies, passionate about sharing their
+                knowledge.</p>
 
             <!--Teacher cards -->
             <div class="teacher-cards-grid">
@@ -636,8 +642,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -654,8 +662,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -672,11 +682,13 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="teacher-card">
                     <div class="teacher-avatar-wrap">
                         <img src="./asset/images/teacherRathana.jpg" alt="Mr. Davit">
@@ -691,8 +703,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -709,8 +723,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -727,8 +743,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -745,8 +763,10 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
                 <div class="teacher-card">
@@ -763,206 +783,212 @@
                     </div>
                     <div class="teacher-divider"></div>
                     <div class="teacher-stats">
-                        <div class="stat-item"><span class="stat-value">38K</span><span class="stat-label">Students</span></div>
-                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span></div>
+                        <div class="stat-item"><span class="stat-value">38K</span><span
+                                class="stat-label">Students</span></div>
+                        <div class="stat-item"><span class="stat-value">7</span><span class="stat-label">Courses</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> 
-    <!-- Section partnership and footer -->
-     <section class="partnership">
-        <h2 class="partnership__title">Our <span>Partnership</span></h2>
-        <p class="partnership__sub">Collaborating with Cambodia's leading tech companies and media organizations to deliver world-class education.</p>
-        
-        <div class="partner-track-wrap">
-            <div class="partner-track">
-                <!-- First set -->
-                <div class="partner-card">
-                    <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-camboNCT.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-cemintel.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-emerald.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-ezecom.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-khmer24.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-loma_tecc.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-sabay.png" alt="">
-                    </a>
-                </div>
-                <!-- Duplicate set for seamless loop -->
-                 <div class="partner-card">
-                    <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-camboNCT.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-cemintel.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-emerald.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-ezecom.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-khmer24.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-loma_tecc.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-sabay.png" alt="">
-                    </a>
-                </div>
-                <!-- Duplicate set for seamless loop -->
-                 <div class="partner-card">
-                    <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-camboNCT.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-cemintel.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-emerald.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-ezecom.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-khmer24.webp" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-loma_tecc.jpg" alt="">
-                    </a>
-                </div>
-                <div class="partner-card">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./asset/images/p-sabay.png" alt="">
-                    </a>
+        </div>
+        <!-- Section partnership and footer -->
+        <section class="partnership">
+            <h2 class="partnership__title">Our <span>Partnership</span></h2>
+            <p class="partnership__sub">Collaborating with Cambodia's leading tech companies and media organizations to
+                deliver world-class education.</p>
+
+            <div class="partner-track-wrap">
+                <div class="partner-track">
+                    <!-- First set -->
+                    <div class="partner-card">
+                        <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-camboNCT.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-cemintel.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-emerald.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-ezecom.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-khmer24.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-loma_tecc.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-sabay.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="partner-card">
+                        <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-camboNCT.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-cemintel.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-emerald.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-ezecom.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-khmer24.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-loma_tecc.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-sabay.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="partner-card">
+                        <a href="https://www.camboNCT.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-camboNCT.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-cemintel.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-emerald.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-ezecom.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-khmer24.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-loma_tecc.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="partner-card">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./asset/images/p-sabay.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
         <!-- footer section -->
         <footer>
-        <div class="footer-grid">
-        
-            <!-- Brand -->
-            <div class="footer-brand">
-            <div class="brand-row">
-                <img class="footerimg" src="./asset/images/ICTLogo9.jpg" alt="">
-                <span class="brand-name">ICT Center</span>
-            </div>
-            <p class="brand-tagline">Empowering professionals through world-class ICT education since 2020.</p>
-            <div class="socials">
-                <a href="https://web.facebook.com/profile.php?id=61551254861573#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://t.me/ICTprofessionlcenter" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://www.tiktok.com/@ict.center" class="social-btn"><i class="fab fa-tiktok"></i></a>
-                <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            </div>
-            <!-- About -->
-            <div class="footer-col">
-            <h4>About ICT</h4>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">All Course</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            </div>
-        
-            <!-- Popular Course -->
-            <div class="footer-col">
-            <h4>Popular Course</h4>
-            <ul>
-                <li>Web Development</li>
-                <li>Data Science</li>
-                <li>Cybersecurity</li>
-                <li>Web Development</li>
-                <li>UX/UI Design</li>
-            </ul>
-            </div>
-            <!-- Contact -->
-            <div class="footer-col">
-            <h4>Contact Info</h4>
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <span class="contact-text">Phnom Penh,<br>Cambodia</span>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                <span class="contact-text">0123837733</span>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                <span class="contact-text">ICTCenter@gmail.com</span>
-            </div>
-            </div>
-        
-            <!-- Download App -->
-            <div class="footer-col app-col">
-            <h4>Download App</h4>
-            <p class="app-desc">Download our app from the App Store and Google Play Store.</p>
-            <div class="playstore">
-                <img src="./asset/images/palystore.webp" alt="">
-                <div class="textplaystore">
-                    <p>Download on <span><b>Play Store</b></span></p>
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="brand-row">
+                        <img class="footerimg" src="./asset/images/ICTLogo9.jpg" alt="">
+                        <span class="brand-name">ICT Center</span>
+                    </div>
+                    <p class="brand-tagline">Empowering professionals through world-class ICT education since 2020.</p>
+                    <div class="socials">
+                        <a href="https://web.facebook.com/profile.php?id=61551254861573#" class="social-btn"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://t.me/ICTprofessionlcenter" class="social-btn"><i
+                                class="fab fa-telegram-plane"></i></a>
+                        <a href="https://www.tiktok.com/@ict.center" class="social-btn"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- About -->
+                <div class="footer-col">
+                    <h4>About ICT</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">All Course</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Course -->
+                <div class="footer-col">
+                    <h4>Popular Course</h4>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Data Science</li>
+                        <li>Cybersecurity</li>
+                        <li>Web Development</li>
+                        <li>UX/UI Design</li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span class="contact-text">Phnom Penh,<br>Cambodia</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <span class="contact-text">0123837733</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <span class="contact-text">ICTCenter@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- Download App -->
+                <div class="footer-col app-col">
+                    <h4>Download App</h4>
+                    <p class="app-desc">Download our app from the App Store and Google Play Store.</p>
+                    <div class="playstore">
+                        <img src="./asset/images/palystore.webp" alt="">
+                        <div class="textplaystore">
+                            <p>Download on <span><b>Play Store</b></span></p>
+                        </div>
+                    </div>
+                    <div class="appstore">
+                        <img src="./asset/images/appstore.jpg" alt="">
+                        <div class="textappstore">
+                            <p>Download on <span><b>App Store</b></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="appstore">
-                <img src="./asset/images/appstore.jpg" alt="">
-                <div class="textappstore">
-                    <p>Download on <span><b>App Store</b></span></p>
-                </div>
-            </div>
-            </div>
-        </div>
         </footer>
     </div><!-- end .container -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -999,62 +1025,62 @@
                 document.body.style.overflow = '';
             });
         });
-    var i = 0;
-    var a = setInterval(function(){
-        $('#activest').text(i);
-        i++;
-        if(i > 2500){
-            clearInterval(a);
-            $('#activest').text("2,500+");
+        var i = 0;
+        var a = setInterval(function () {
+            $('#activest').text(i);
+            i++;
+            if (i > 2500) {
+                clearInterval(a);
+                $('#activest').text("2,500+");
+            }
+        }, 1);
+
+        var j = 0;
+        var b = setInterval(function () {
+            $('#professionaltea').text(j);
+            j++;
+            if (j > 280) {
+                clearInterval(b);
+                $('#professionaltea').text("280+");
+            }
+        }, 20);
+
+        var k = 0;
+        var c = setInterval(function () {
+            $('#languagesavail').text(k);
+            k++;
+            if (k > 28) {
+                clearInterval(c);
+                $('#languagesavail').text("28+");
+            }
+        }, 60);
+
+        var l = 0;
+        var intervalIid = setInterval(function () {
+            $('#trainingevents').text(l);
+            l++;
+            if (l > 320) {
+                clearInterval(intervalIid);
+                $('#trainingevents').text("320+");
+            }
+        }, 20);
+
+
+
+
+
+
+
+
+        /* Toggle a dropdown sub-menu open / closed */
+        function toggleMenu(item) {
+            /* Find the <ul class="sub-menu"> right after this item */
+            const subMenu = item.nextElementSibling;
+
+            /* Toggle the "open" class on both the button and the list */
+            item.classList.toggle('open');
+            subMenu.classList.toggle('open');
         }
-    }, 1);
-
-    var j = 0;
-    var b = setInterval(function(){
-        $('#professionaltea').text(j);
-        j++;
-        if(j > 280){
-            clearInterval(b);
-            $('#professionaltea').text("280+");
-        }
-    }, 20);
-
-    var k = 0;
-    var c = setInterval(function(){
-        $('#languagesavail').text(k);
-        k++;
-        if(k > 28){
-            clearInterval(c);
-            $('#languagesavail').text("28+");
-        }
-    }, 60);
-
-    var l = 0;
-    var intervalIid = setInterval(function(){
-        $('#trainingevents').text(l);
-        l++;
-        if(l > 320){
-            clearInterval(intervalIid);
-            $('#trainingevents').text("320+");
-        }
-    }, 20);
-
-
-
-
-
-
-
-
-    /* Toggle a dropdown sub-menu open / closed */
-    function toggleMenu(item) {
-        /* Find the <ul class="sub-menu"> right after this item */
-        const subMenu = item.nextElementSibling;
-    
-        /* Toggle the "open" class on both the button and the list */
-        item.classList.toggle('open');
-        subMenu.classList.toggle('open');
-    }
 
 
 
