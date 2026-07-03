@@ -50,10 +50,15 @@
             border: none;
         }
         
-        .hero-cardd img{
+       .hero-cardd img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease; /* smooth zoom animation */
+        }
+
+        .hero-cardd:hover img{
+            transform: scale(1.08); /* zoom in on hover */
         }
         
         /* dark gradient so text stays readable over the photo */
@@ -135,6 +140,7 @@
         }
         
         .search-box-blogg{
+            background-color: #fff;
             display: flex;
             align-items: center;
             border: 1px solid grey;
@@ -160,25 +166,28 @@
         
         /* ===== Card Grid ===== */
         .card-grid{
+            width: 99%;
+            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-            gap: 25px;
+            gap: 48px;
         }
         
         .blog-card-section{
             border: 1px solid rgb(225, 223, 223);
             border-radius: 16px;
             overflow: hidden;
-            transition: box-shadow 0.2s ease;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
         }
-        
+
         .blog-card-section:hover{
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-4px); /* card lifts slightly */
         }
         
         .card-img-blog{
             position: relative;
-            height: 180px;
+            height: 200px;
         }
         
         .card-img-blog img{
@@ -256,9 +265,266 @@
             justify-content: center;
             cursor: pointer;
         }
-        .more-blog .blog-number-page .active{
-            
+
+/* ============================================= */
+/* ===== Responsive: Blog Page ===== */
+/* ============================================= */
+
+/* ----- 1024px: Tablet / small laptop ----- */
+@media (max-width: 1024px){
+    .blog-header{
+        height: 160px;
+    }
+    .blog-header h1{
+        font-size: 34px;
+    }
+    .blog-header p{
+        width: 75%;
+    }
+
+    .hero-cardd{
+        height: 300px;
+    }
+    .hero-overlay h1{
+        font-size: 26px;
+    }
+    .hero-overlay p{
+        font-size: 14px;
+        max-width: 400px;
+    }
+
+    .card-grid{
+        width: 88%;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+/* ----- 768px: Tablet portrait ----- */
+@media (max-width: 768px){
+    .blog-header{
+        height: auto;
+        padding: 25px 15px;
+    }
+    .blog-header h1{
+        font-size: 28px;
+    }
+    .blog-header p{
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .hero-cardd{
+        height: 260px;
+        margin-bottom: 30px;
+    }
+    .hero-overlay{
+        padding: 20px;
+    }
+    .hero-overlay h1{
+        font-size: 22px;
+    }
+    .hero-overlay p{
+        display: none; /* hide long description on smaller screens */
+    }
+
+    .filter-row{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .filter-pills{
+        flex-wrap: wrap;
+        overflow-x: visible;
+        gap: 8px;
+    }
+    .filter-pills .pill{
+        flex: 0 1 auto; /* allow wrapping instead of forcing single line */
+    }
+    .search-box-blogg{
+        width: 60%;
+    }
+
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+@media (max-width: 690px){
+    .filter-pills{
+        flex-wrap: wrap;      /* let pills drop to a new line instead of scrolling */
+        overflow-x: visible;  /* cancel the scroll behavior inherited from 768px */
+        gap: 8px;
+    }
+
+    .filter-pills .pill{
+        flex: 0 1 auto;   /* allow wrapping, no forced single line */
+        padding: 7px 16px;
+        font-size: 13px;
+    }
+    .badge-feature{
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    .hero-meta{
+        font-size: 12px;
+    }
+
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+        width: 79%;
+    }
+    .card-grid .blog-card-section{
+        width: 100%;
+    }
+    .blog-card-section .card-body-blog h3{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .blog-card-section .card-body-blog p{
+        font-size: 9px;
+        /* line-height: 1.4; */
+    }
+
+    .card-img-blog{
+        height: 150px;
+    }
+    .card-img-blog .badge-category{
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #fff;
+            color: blue;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 11px;
+            border-radius: 20px;
         }
+    .card-body-blog h3{
+        font-size: 17px;
+    }
+    /* .card-body-blog p{
+        font-size: 9px;
+    } */
+    .card-footer-blog{
+        font-size: 11px;
+    }
+    .card-footer-blog i{
+        font-size: 10px;
+    }
+    .card-footer-blog a{
+        font-size: 10px;
+    } 
+
+}
+
+
+/* ----- 480px: Mobile ----- */
+@media (max-width: 560px){
+    .blog-wrapper{
+        width: 92%;
+        padding-top: 15px;
+    }
+
+    .blog-header h1{
+        font-size: 22px;
+    }
+    .blog-header p{
+        width: 95%;
+        font-size: 13px;
+    }
+
+    .hero-cardd{
+        height: 220px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    .hero-overlay{
+        padding: 16px;
+    }
+    .hero-overlay h1{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .filter-pills{
+        flex-wrap: wrap;      /* let pills drop to a new line instead of scrolling */
+        overflow-x: visible;  /* cancel the scroll behavior inherited from 768px */
+        gap: 8px;
+    }
+
+    .filter-pills .pill{
+        flex: 0 1 auto;   /* allow wrapping, no forced single line */
+        padding: 7px 16px;
+        font-size: 13px;
+    }
+    .badge-feature{
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    .hero-meta{
+        font-size: 12px;
+    }
+
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+        width: 99%;
+    }
+    .card-grid .blog-card-section{
+        width: 100%;
+    }
+    .blog-card-section .card-body-blog h3{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .blog-card-section .card-body-blog p{
+        font-size: 9px;
+        /* line-height: 1.4; */
+    }
+
+    .card-img-blog{
+        height: 120px;
+    }
+    .card-img-blog .badge-category{
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #fff;
+            color: blue;
+            font-size: 9px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 20px;
+        }
+    .card-body-blog h3{
+        font-size: 11px;
+    }
+    /* .card-body-blog p{
+        font-size: 9px;
+    } */
+    .card-footer-blog{
+        font-size: 9px;
+    }
+    .card-footer-blog i{
+        font-size: 8px;
+    }
+    .card-footer-blog a{
+        font-size: 8px;
+    }
+
+    .more-blog{
+        gap: 12px;
+    }
+    .more-blog .blog-number-page{
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+}
+
 
 
     </style>
@@ -483,7 +749,7 @@
  
             <!-- ===== Hero / Feature Card ===== -->
             <div class="hero-cardd">
-                <img src="/asset/images/cybersecurity.webp" alt="Feature post">
+                <img src="/asset/images/blog-slide.avif" alt="Feature post">
                 <div class="hero-overlay">
                 <span class="badge-feature">Feature</span>
                 <h1>The Future of Web Development in 2026</h1>
@@ -522,7 +788,7 @@
                         <p>Explore the latest trends and technologies shaping the future of web development.</p>
                         <div class="card-footer-blog">
                         <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -538,7 +804,7 @@
                         <p>Explore the latest trends and technologies shaping the future of web development.</p>
                         <div class="card-footer-blog">
                         <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -554,7 +820,7 @@
                         <p>Explore the latest trends and technologies shaping the future of web development.</p>
                         <div class="card-footer-blog">
                         <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -571,7 +837,7 @@
                         <p>Explore the latest trends and technologies shaping the future of web development.</p>
                         <div class="card-footer-blog">
                         <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -588,7 +854,7 @@
                         <p>Explore the latest trends and technologies shaping the future of web development.</p>
                         <div class="card-footer-blog">
                         <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -604,7 +870,7 @@
                     <p>Explore the latest trends and technologies shaping the future of web development.</p>
                     <div class="card-footer-blog">
                     <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                    <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="blog-detail.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 </div>
