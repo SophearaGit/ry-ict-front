@@ -673,7 +673,7 @@
                 <div class="boxcard">
                     <img src="./asset/images/ITPROJECTMANAGE.webp" alt="Course">
                     <h3>$150.00</h3>
-                    <button><a href="#">Enroll Now</a></button>
+                    <button  id="enroll-course"><a href="#">Enroll Now</a></button>
                     <div class="fav-share">
                         <div class="fav">
                             <i class="fa-regular fa-heart"></i>
@@ -935,74 +935,29 @@
 
 
         // body section
-        $('#Overview').click(function () {
-            $('section').removeClass('active')
-            $('#section1').addClass('active')
+        function setTabActive(tabId, sectionId) {
+            $('section').removeClass('active');
+            $('#section1, #section2, #section3').removeClass('active');
+            $('#Overview, #curriculum, #instructor').removeClass('active');
 
-            // Add CSS styles to active tab
-            $('#Overview').css({
-                'color': '#007bff',
-                'border-bottom': '3px solid #007bff',
-                'font-weight': 'bold'
-            })
-            // Remove styles from other tab
-            $('#curriculum').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-            $('#instructor').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-        })
+            $(sectionId).addClass('active');
+            $(tabId).addClass('active');
+        }
+
+        $('#Overview').click(function () {
+            setTabActive('#Overview', '#section1');
+        });
 
         $('#curriculum').click(function () {
-            $('section').removeClass('active')
-            $('#section2').addClass('active')
-
-            // Add CSS styles to active tab
-            $('#curriculum').css({
-                'color': '#007bff',
-                'border-bottom': '3px solid #007bff',
-                'font-weight': 'bold'
-            })
-            // Remove styles from other tab
-            $('#Overview').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-            $('#instructor').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-        })
+            setTabActive('#curriculum', '#section2');
+        });
 
         $('#instructor').click(function () {
-            $('section').removeClass('active')
-            $('#section3').addClass('active')
+            setTabActive('#instructor', '#section3');
+        });
 
-            // Add CSS styles to active tab
-            $('#instructor').css({
-                'color': '#007bff',
-                'border-bottom': '3px solid #007bff',
-                'font-weight': 'bold'
-            })
-            // Remove styles from other tab
-            $('#Overview').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-            $('#curriculum').css({
-                'color': '',
-                'border-bottom': '',
-                'font-weight': 'normal'
-            })
-        })
+        // set default active tab on page load
+        setTabActive('#Overview', '#section1');
     </script>
 </body>
 
