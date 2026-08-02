@@ -1,467 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT Pro Training</title>
+    <meta name="description"
+        content="In-depth articles and tutorials from ICT Professional Training Center's instructors and industry experts.">
+    <title>Blog Post | ICT Professional Training Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./asset/images/ICTLogo9.jpg" type="image/jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         /* ===== Hero Image ===== */
-.blog-detail-hero{
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-}
+        .blog-detail-hero {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
 
-.blog-detail-hero img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .blog-detail-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.back-to-blog{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 30px;
-    text-decoration: none;
-    backdrop-filter: blur(4px);
-}
+        .back-to-blog {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            backdrop-filter: blur(4px);
+        }
 
-.back-to-blog:hover{
-    background: rgba(0,0,0,0.7);
-}
+        .back-to-blog:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
 
-/* ===== Overlapping Content Card ===== */
-.Blog-detail-card{
-    background: #fff;
-    max-width: 990px;
-    margin: -100px auto 0;
-    padding: 40px 50px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    position: relative;
-    text-align: center;
-    animation: fadeSlideUp 0.7s ease forwards;
-    opacity: 0;
-}
+        /* ===== Overlapping Content Card ===== */
+        .Blog-detail-card {
+            background: #fff;
+            max-width: 990px;
+            margin: -100px auto 0;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            text-align: center;
+            animation: fadeSlideUp 0.7s ease forwards;
+            opacity: 0;
+        }
 
-@keyframes fadeSlideUp{
-    from{
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-.blog-detail-category{
-    display: inline-block;
-    background: #e6efff;
-    color: blue;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 18px;
-    border-radius: 20px;
-    margin-bottom: 13px;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.Blog-detail-card h1{
-    font-size: 33px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #111;
-    margin-bottom: 25px;
-}
+        .blog-detail-category {
+            display: inline-block;
+            background: #e6efff;
+            color: blue;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 13px;
+        }
 
-/* ===== Author / Date / Read time row ===== */
-.detail-meta{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeSlideUp 0.6s ease forwards;
-    animation-delay: 0.25s;
-}
+        .Blog-detail-card h1 {
+            font-size: 33px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #111;
+            margin-bottom: 25px;
+        }
 
-.meta-author{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-align: left;
-}
-.meta-author div{
-    line-height: 0.6;
-}
+        /* ===== Author / Date / Read time row ===== */
+        .detail-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeSlideUp 0.6s ease forwards;
+            animation-delay: 0.25s;
+        }
 
-.meta-author img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid rgb(230, 228, 228);
-    padding: 1px;
-    object-fit: cover;
-}
+        .meta-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+        }
 
-.detail-meta .meta-date{
-    line-height: 0.6;
-}
+        .meta-author div {
+            line-height: 0.6;
+        }
 
-.meta-author p,
-.meta-date p{
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    color: #111;
-}
+        .meta-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid rgb(230, 228, 228);
+            padding: 1px;
+            object-fit: cover;
+        }
 
-.meta-author span,
-.meta-date span{
-    font-size: 13px;
-    color: grey;
-}
+        .detail-meta .meta-date {
+            line-height: 0.6;
+        }
 
-.meta-divider{
-    width: 1px;
-    height: 45px;
-    background: #c2c3c4;
-}
+        .meta-author p,
+        .meta-date p {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: #111;
+        }
 
-.meta-read{
-    font-size: 14px;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.blog-description-detail{
-    margin: auto;
-    width: 65%;
-    padding: 35px;
-}
-.blog-description-detail p{
-    line-height: 1.4;
-}
-.blog-description-detail div{
-    margin-top: 40px;
-}
-.blog-description-detail div p{
-    line-height: 0.9;
-}
+        .meta-author span,
+        .meta-date span {
+            font-size: 13px;
+            color: grey;
+        }
 
-/* ===== Tags + Share Row ===== */
-.tags-share-row{
-    width: 62%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 25px 0;
-    border-top: 1px solid #d5d5d6;
-    border-bottom: 1px solid #d5d5d6;
-    /* margin: 30px 0; */
-}
+        .meta-divider {
+            width: 1px;
+            height: 45px;
+            background: #c2c3c4;
+        }
 
-.tags-group{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.share-group{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+        .meta-read {
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-.tags-label,
-.share-label{
-    font-weight: 700;
-    font-size: 15px;
-    margin-right: 5px;
-}
+        .blog-description-detail {
+            margin: auto;
+            width: 65%;
+            padding: 35px;
+        }
 
-/* reuse existing .pills style from filter section, just smaller here */
-.tags-group .pills{
-    padding: 6px 16px;
-    font-size: 15px;
-    border-radius: 30px;
-    font-weight: 600;
-    border: none;
-    cursor: default;
-}
+        .blog-description-detail p {
+            line-height: 1.4;
+        }
 
-.share-icon{
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #f3f4f6;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.2s ease;
-}
+        .blog-description-detail div {
+            margin-top: 40px;
+        }
 
-.share-icon:hover{
-    background: #e5e7eb;
-}
+        .blog-description-detail div p {
+            line-height: 0.9;
+        }
 
-/* ===== Author Bio Card ===== */
-.author-card{
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    border: 1px solid #d7d7d9;
-    border-radius: 20px;
-    padding: 20px 35px;
-    max-width: 800px;
-    margin: 50px auto 20px;
-}
+        /* ===== Tags + Share Row ===== */
+        .tags-share-row {
+            width: 62%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 25px 0;
+            border-top: 1px solid #d5d5d6;
+            border-bottom: 1px solid #d5d5d6;
+            /* margin: 30px 0; */
+        }
 
-.author-card img{
-    width: 130px;
-    height: 150px;
-    border-radius: 20px;
-    object-fit: cover;
-    border: 1px solid rgb(233, 232, 232);
-    flex-shrink: 0;
-}
+        .tags-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-.author-info h3{
-    font-size: 18px;
-    margin-top: 10px;
-}
+        .share-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-.author-info h3 span{
-    font-weight: 700;
-}
+        .tags-label,
+        .share-label {
+            font-weight: 700;
+            font-size: 15px;
+            margin-right: 5px;
+        }
 
-.author-info p{
-    font-size: 14.5px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
+        /* reuse existing .pills style from filter section, just smaller here */
+        .tags-group .pills {
+            padding: 6px 16px;
+            font-size: 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            cursor: default;
+        }
 
-.author-link{
-    color: blue;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-}
+        .share-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
 
-.author-link:hover{
-    text-decoration: underline;
-}
-/* ============================================= */
-/* ===== Responsive: Blog Detail Page ===== */
-/* ============================================= */
+        .share-icon:hover {
+            background: #e5e7eb;
+        }
 
-/* ----- 1024px: Tablet / small laptop ----- */
-@media (max-width: 1024px){
-    .blog-detail-hero{
-        height: 280px;
-    }
+        /* ===== Author Bio Card ===== */
+        .author-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            border: 1px solid #d7d7d9;
+            border-radius: 20px;
+            padding: 20px 35px;
+            max-width: 800px;
+            margin: 50px auto 20px;
+        }
 
-    .Blog-detail-card{
-        max-width: 90%;
-        padding: 35px 40px;
-        margin-top: -80px;
-    }
-    .Blog-detail-card h1{
-        font-size: 28px;
-    }
+        .author-card img {
+            width: 130px;
+            height: 150px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 1px solid rgb(233, 232, 232);
+            flex-shrink: 0;
+        }
 
-    .blog-description-detail{
-        width: 80%;
-        padding: 25px;
-    }
+        .author-info h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-    .tags-share-row{
-        width: 80%;
-    }
+        .author-info h3 span {
+            font-weight: 700;
+        }
 
-    .author-card{
-        max-width: 90%;
-    }
-}
+        .author-info p {
+            font-size: 14.5px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
 
-/* ----- 768px: Tablet portrait ----- */
-@media (max-width: 768px){
-    .blog-detail-hero{
-        height: 220px;
-    }
-    .back-to-blog{
-        top: 14px;
-        left: 14px;
-        font-size: 13px;
-        padding: 8px 14px;
-    }
+        .author-link {
+            color: blue;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
 
-    .Blog-detail-card{
-        max-width: 92%;
-        padding: 30px 25px;
-        margin-top: -60px;
-        border-radius: 16px;
-    }
-    .Blog-detail-card h1{
-        font-size: 22px;
-    }
-    .blog-detail-category{
-        font-size: 13px;
-        padding: 5px 14px;
-    }
+        .author-link:hover {
+            text-decoration: underline;
+        }
 
-    /* stack author / date / read-time instead of one row */
-    .detail-meta{
-        flex-direction: column;
-        gap: 12px;
-    }
-    .meta-divider{
-        width: 60px;
-        height: 1px; /* turn vertical dividers horizontal when stacked */
-    }
+        /* ============================================= */
+        /* ===== Responsive: Blog Detail Page ===== */
+        /* ============================================= */
 
-    .blog-description-detail{
-        width: 90%;
-        padding: 20px 15px;
-    }
+        /* ----- 1024px: Tablet / small laptop ----- */
+        @media (max-width: 1024px) {
+            .blog-detail-hero {
+                height: 280px;
+            }
 
-    .tags-share-row{
-        width: 90%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    .tags-group,
-    .share-group{
-        width: 100%;
-    }
+            .Blog-detail-card {
+                max-width: 90%;
+                padding: 35px 40px;
+                margin-top: -80px;
+            }
 
-    .author-card{
-        max-width: 92%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 25px;
-    }
-    .author-card img{
-        width: 100px;
-        height: 100px;
-    }
-}
+            .Blog-detail-card h1 {
+                font-size: 28px;
+            }
 
-/* ----- 480px: Mobile ----- */
-@media (max-width: 480px){
-    .blog-detail-hero{
-        height: 180px;
-    }
-    .back-to-blog{
-        font-size: 12px;
-        padding: 7px 12px;
-        gap: 6px;
-    }
+            .blog-description-detail {
+                width: 80%;
+                padding: 25px;
+            }
 
-    .Blog-detail-card{
-        padding: 22px 18px;
-        margin-top: -40px;
-        border-radius: 14px;
-    }
-    .Blog-detail-card h1{
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    .blog-detail-category{
-        font-size: 12px;
-        padding: 4px 12px;
-    }
+            .tags-share-row {
+                width: 80%;
+            }
 
-    .meta-author img{
-        width: 45px;
-        height: 45px;
-    }
-    .meta-author p,
-    .meta-date p{
-        font-size: 13px;
-    }
-    .meta-author span,
-    .meta-date span{
-        font-size: 11px;
-    }
-    .meta-read{
-        font-size: 12px;
-    }
-    .share-group{
-        margin-top: 10px;
-        /* margin: auto;
+            .author-card {
+                max-width: 90%;
+            }
+        }
+
+        /* ----- 768px: Tablet portrait ----- */
+        @media (max-width: 768px) {
+            .blog-detail-hero {
+                height: 220px;
+            }
+
+            .back-to-blog {
+                top: 14px;
+                left: 14px;
+                font-size: 13px;
+                padding: 8px 14px;
+            }
+
+            .Blog-detail-card {
+                max-width: 92%;
+                padding: 30px 25px;
+                margin-top: -60px;
+                border-radius: 16px;
+            }
+
+            .Blog-detail-card h1 {
+                font-size: 22px;
+            }
+
+            .blog-detail-category {
+                font-size: 13px;
+                padding: 5px 14px;
+            }
+
+            /* stack author / date / read-time instead of one row */
+            .detail-meta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .meta-divider {
+                width: 60px;
+                height: 1px;
+                /* turn vertical dividers horizontal when stacked */
+            }
+
+            .blog-description-detail {
+                width: 90%;
+                padding: 20px 15px;
+            }
+
+            .tags-share-row {
+                width: 90%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .tags-group,
+            .share-group {
+                width: 100%;
+            }
+
+            .author-card {
+                max-width: 92%;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .author-card img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* ----- 480px: Mobile ----- */
+        @media (max-width: 480px) {
+            .blog-detail-hero {
+                height: 180px;
+            }
+
+            .back-to-blog {
+                font-size: 12px;
+                padding: 7px 12px;
+                gap: 6px;
+            }
+
+            .Blog-detail-card {
+                padding: 22px 18px;
+                margin-top: -40px;
+                border-radius: 14px;
+            }
+
+            .Blog-detail-card h1 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .blog-detail-category {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+
+            .meta-author img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .meta-author p,
+            .meta-date p {
+                font-size: 13px;
+            }
+
+            .meta-author span,
+            .meta-date span {
+                font-size: 11px;
+            }
+
+            .meta-read {
+                font-size: 12px;
+            }
+
+            .share-group {
+                margin-top: 10px;
+                /* margin: auto;
         display: flex;
         justify-content: center;
         align-items: center; */
-    }
+            }
 
-    .blog-description-detail{
-        width: 100%;
-        padding: 15px 10px;
-    }
-    .blog-description-detail p{
-        font-size: 14px;
-    }
+            .blog-description-detail {
+                width: 100%;
+                padding: 15px 10px;
+            }
 
-    .tags-share-row{
-        width: 93%;
-        padding: 18px 0;
-    }
-    .tags-group .pills{
-        padding: 5px 12px;
-        font-size: 13px;
-    }
-    .share-icon{
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-    }
+            .blog-description-detail p {
+                font-size: 14px;
+            }
 
-    .author-card{
-        max-width: 100%;
-        padding: 20px 15px;
-        margin: 30px auto 15px;
-    }
-    .author-card img{
-        width: 80px;
-        height: 90px;
-    }
-    .author-info h3{
-        font-size: 16px;
-    }
-    .author-info p{
-        font-size: 13px;
-    }
-}
+            .tags-share-row {
+                width: 93%;
+                padding: 18px 0;
+            }
+
+            .tags-group .pills {
+                padding: 5px 12px;
+                font-size: 13px;
+            }
+
+            .share-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
+
+            .author-card {
+                max-width: 100%;
+                padding: 20px 15px;
+                margin: 30px auto 15px;
+            }
+
+            .author-card img {
+                width: 80px;
+                height: 90px;
+            }
+
+            .author-info h3 {
+                font-size: 16px;
+            }
+
+            .author-info p {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="header">
+    <div class="container">
+        <div class="header">
             <div class="schoollogo">
 
                 <!-- a tag with logo and tittle -->
@@ -474,66 +519,66 @@
             <!-- Desktop nav -->
             <ul>
                 <li class="dropdown">
-                    <a href="allcoursedetail.html" class="dropbtn" title="Click Me">Course</a>
+                    <a href="course.html" class="dropbtn" title="Click Me">Course</a>
                     <div class="dropdown-content">
                         <div class="dropdown-column">
                             <div class="has-submenu">
                                 <a href="#">Programming<span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">C++</a>
-                                    <a href="detailcourse.html">C#</a>
-                                    <a href="detailcourse.html">Java I</a>
-                                    <a href="detailcourse.html">Java II</a>
-                                    <a href="detailcourse.html">Python</a>
-                                    <a href="detailcourse.html">DevOps</a>
-                                    <a href="detailcourse.html">Project Managerment</a>
-                                    <a href="detailcourse.html">Software Development with Python</a>
-                                    <a href="detailcourse.html">Software Development with Java</a>
-                                    <a href="detailcourse.html">Software Development with Python</a>
+                                    <a href="course-detail.html">C++</a>
+                                    <a href="course-detail.html">C#</a>
+                                    <a href="course-detail.html">Java I</a>
+                                    <a href="course-detail.html">Java II</a>
+                                    <a href="course-detail.html">Python</a>
+                                    <a href="course-detail.html">DevOps</a>
+                                    <a href="course-detail.html">Project Managerment</a>
+                                    <a href="course-detail.html">Software Development with Python</a>
+                                    <a href="course-detail.html">Software Development with Java</a>
+                                    <a href="course-detail.html">Software Development with Python</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
                                 <a href="#">Website <span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">Web Frontend</a>
-                                    <a href="detailcourse.html">Web Backend</a>
-                                    <a href="detailcourse.html">Full Stack Development</a>
-                                    <a href="detailcourse.html">Web Backend(Node js)</a>
+                                    <a href="course-detail.html">Web Frontend</a>
+                                    <a href="course-detail.html">Web Backend</a>
+                                    <a href="course-detail.html">Full Stack Development</a>
+                                    <a href="course-detail.html">Web Backend(Node js)</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
                                 <a href="#">Design <span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">UI / UX</a>
-                                    <a href="detailcourse.html">Graphic Design</a>
-                                    <a href="detailcourse.html">Video Editor</a>
+                                    <a href="course-detail.html">UI / UX</a>
+                                    <a href="course-detail.html">Graphic Design</a>
+                                    <a href="course-detail.html">Video Editor</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
                                 <a href="#">Data <span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">Data Managerment System</a>
-                                    <a href="detailcourse.html">Data Analytic</a>
-                                    <a href="detailcourse.html">Machine Learning</a>
-                                    <a href="detailcourse.html">Deep Learning</a>
-                                    <a href="detailcourse.html">Power BI</a>
+                                    <a href="course-detail.html">Data Managerment System</a>
+                                    <a href="course-detail.html">Data Analytic</a>
+                                    <a href="course-detail.html">Machine Learning</a>
+                                    <a href="course-detail.html">Deep Learning</a>
+                                    <a href="course-detail.html">Power BI</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
                                 <a href="#">Computer Office<span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">Microsoft Office</a>
-                                    <a href="detailcourse.html">Advance Excel</a>
-                                    <a href="detailcourse.html">Excel VBA</a>
+                                    <a href="course-detail.html">Microsoft Office</a>
+                                    <a href="course-detail.html">Advance Excel</a>
+                                    <a href="course-detail.html">Excel VBA</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
                                 <a href="#">Networking<span>›</span></a>
                                 <div class="submenu">
-                                    <a href="detailcourse.html">Networking CCNA</a>
-                                    <a href="detailcourse.html">Advance Networking</a>
-                                    <a href="detailcourse.html">Cyber Security</a>
-                                    <a href="detailcourse.html">Cloud Computing</a>
+                                    <a href="course-detail.html">Networking CCNA</a>
+                                    <a href="course-detail.html">Advance Networking</a>
+                                    <a href="course-detail.html">Cyber Security</a>
+                                    <a href="course-detail.html">Cloud Computing</a>
                                 </div>
                             </div>
                         </div>
@@ -570,7 +615,7 @@
             </div>
             <nav>
                 <div class="course-mobile-dropdown">
-                   <h4><a href="detailcourse.html" style="text-decoration: none;">Course</a></h4>
+                    <h4><a href="course-detail.html" style="text-decoration: none;">Course</a></h4>
                     <ul>
                         <li>
                             <div class="menu-item" onclick="toggleMenu(this)">
@@ -681,89 +726,93 @@
                 <button class="drawer-register">Register</button>
             </div>
         </div>
-    <div class="blog-detail-contianer">
-        <!-- ===== Blog Detail Header ===== -->
-        <div class="blog-detail-hero">
-            <img src="/asset/images/blod-detail-slide-img.jpg" alt="Blog cover">
-            <a href="blog.html" class="back-to-blog">
-                <i class="fa-solid fa-arrow-left"></i> Back to Blog
-            </a>
-        </div>
+        <div class="blog-detail-contianer">
+            <!-- ===== Blog Detail Header ===== -->
+            <div class="blog-detail-hero" data-aos="fade-up">
+                <img src="/asset/images/blod-detail-slide-img.jpg" alt="Blog cover">
+                <a href="blog.html" class="back-to-blog">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Blog
+                </a>
+            </div>
 
-        <div class="Blog-detail-card">
-            <span class="blog-detail-category">Technology</span>
-            <h1>The Future of Web Development in 2026</h1>
+            <div class="Blog-detail-card" data-aos="fade-up">
+                <span class="blog-detail-category">Technology</span>
+                <h1>The Future of Web Development in 2026</h1>
 
-            <div class="detail-meta">
-                <div class="meta-author">
-                    <img src="/asset/images/staff/QAT(bong pheaktra).JPG" alt="Phat Sopheaktra">
-                    <div>
-                        <p>Phat Sopheaktra</p>
-                        <span>Author</span>
+                <div class="detail-meta">
+                    <div class="meta-author">
+                        <img src="/asset/images/staff/QAT(bong pheaktra).JPG" alt="Phat Sopheaktra">
+                        <div>
+                            <p>Phat Sopheaktra</p>
+                            <span>Author</span>
+                        </div>
+                    </div>
+
+                    <div class="meta-divider"></div>
+
+                    <div class="meta-date">
+                        <p>Sep 12, 2025</p>
+                        <span>Published</span>
+                    </div>
+
+                    <div class="meta-divider"></div>
+
+                    <div class="meta-read">
+                        <i class="fa-regular fa-clock"></i> 5 min read
                     </div>
                 </div>
+            </div>
 
-                <div class="meta-divider"></div>
+            <div class="blog-description-detail">
+                <p>Web development continues to evolve at a rapid pace. In 2026, we're seeing exciting developments in
+                    AI-powered development tools, WebAssembly, and edge computing.<br><br> The rise of AI assistants has
+                    transformed how developers write code, but the fundamentals remain crucial. Understanding core
+                    concepts like data structures, algorithms, and system design is more important than ever.</p>
+                <div class="div">
+                    <h5>Key trends to watch:</h5><br>
+                    <p>- AI-powered development tools</p>
+                    <p>- WebAssembly for high-performance applications</p>
+                    <p>- Edge computing and serverless architectures</p>
+                    <p>- Progressive Web Apps (PWAs)</p>
+                    <p>- Web3 and decentralized applications</p>
+                </div><br>
+                <p>The future is bright for web developers who continue to learn and adapt to new technologies.</p>
+            </div>
 
-                <div class="meta-date">
-                    <p>Sep 12, 2025</p>
-                    <span>Published</span>
+            <!-- ===== Tags + Share Row ===== -->
+            <div class="tags-share-row">
+                <div class="tags-group">
+                    <i class="fa-solid fa-tag"></i>
+                    <span class="tags-label">Tags</span>
+                    <button class="pills">Technology</button>
+                    <button class="pills">Design</button>
+                    <button class="pills">career</button>
+                    <button class="pills">AI</button>
+                    <button class="pills">Tutorials</button>
                 </div>
 
-                <div class="meta-divider"></div>
+                <div class="share-group">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span class="share-label">Share</span>
+                    <a href="#" class="share-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="share-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="share-icon"><i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="#" class="share-icon"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
 
-                <div class="meta-read">
-                    <i class="fa-regular fa-clock"></i> 5 min read
+            <!-- ===== Author Bio Card ===== -->
+            <div class="author-card" data-aos="fade-up">
+                <img src="/asset/images/staff/QAT(bong pheaktra).JPG" alt="Phat Sopheaktra">
+                <div class="author-info">
+                    <h3>About <span>Phat Sopheaktra</span></h3>
+                    <p>An experienced professional with a passion for education and technology. Dedicated to helping
+                        others learn and grow in their careers through insightful content and practical advice.</p>
+                    <a href="#" class="author-link">View all posts by Phat Sopheaktra</a>
                 </div>
             </div>
         </div>
-
-        <div class="blog-description-detail">
-            <p>Web development continues to evolve at a rapid pace. In 2026, we're seeing exciting developments in AI-powered development tools, WebAssembly, and edge computing.<br><br> The rise of AI assistants has transformed how developers write code, but the fundamentals remain crucial. Understanding core concepts like data structures, algorithms, and system design is more important than ever.</p>
-            <div class="div">
-                <h5>Key trends to watch:</h5><br>
-                <p>- AI-powered development tools</p>
-                <p>- WebAssembly for high-performance applications</p>
-                <p>- Edge computing and serverless architectures</p>
-                <p>- Progressive Web Apps (PWAs)</p>
-                <p>- Web3 and decentralized applications</p>
-            </div><br>
-            <p>The future is bright for web developers who continue to learn and adapt to new technologies.</p>
-        </div>
-        
-        <!-- ===== Tags + Share Row ===== -->
-        <div class="tags-share-row">
-            <div class="tags-group">
-                <i class="fa-solid fa-tag"></i>
-                <span class="tags-label">Tags</span>
-                <button class="pills">Technology</button>
-                <button class="pills">Design</button>
-                <button class="pills">career</button>
-                <button class="pills">AI</button>
-                <button class="pills">Tutorials</button>
-            </div>
-
-            <div class="share-group">
-                <i class="fa-solid fa-share-nodes"></i>
-                <span class="share-label">Share</span>
-                <a href="#" class="share-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="share-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="share-icon"><i class="fa-solid fa-paper-plane"></i></a>
-                <a href="#" class="share-icon"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </div>
-
-        <!-- ===== Author Bio Card ===== -->
-        <div class="author-card">
-            <img src="/asset/images/staff/QAT(bong pheaktra).JPG" alt="Phat Sopheaktra">
-            <div class="author-info">
-                <h3>About <span>Phat Sopheaktra</span></h3>
-                <p>An experienced professional with a passion for education and technology. Dedicated to helping others learn and grow in their careers through insightful content and practical advice.</p>
-                <a href="#" class="author-link">View all posts by Phat Sopheaktra</a>
-            </div>
-        </div>
-    </div>
-    <footer>
+        <footer>
             <div class="footer-grid">
                 <!-- Brand -->
                 <div class="footer-brand">
@@ -812,7 +861,8 @@
                     <h4>Contact Info</h4>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span class="contact-text"><a href="#">ផ្លូវលេខ240B ផ្លូវ132 ភូមិ06 សង្កាត់ទឹក ល្អក់ទី01 ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</a></span>
+                        <span class="contact-text"><a href="#">ផ្លូវលេខ240B ផ្លូវ132 ភូមិ06 សង្កាត់ទឹក ល្អក់ទី01
+                                ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</a></span>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
@@ -837,61 +887,73 @@
                 </div>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- end .container -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+    </script>
 
-        <!-- Dark/Light Mode Script -->
-        <script>
-            const html = document.documentElement;
-            function applyTheme(theme) {
-                html.setAttribute('data-theme', theme);
-                document.getElementById('themeIcon').className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-                localStorage.setItem('theme', theme);
+    <!-- Dark/Light Mode Script -->
+    <script>
+        const html = document.documentElement;
+        function applyTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            document.getElementById('themeIcon').className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            localStorage.setItem('theme', theme);
+        }
+        const saved = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        applyTheme(saved);
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+    <script>
+
+        /* ── Nav Active State (works across separate HTML pages) ── */
+        const navLinks = document.querySelectorAll('.header > ul > li > a');
+
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+
+            if (linkPage === currentPage) {
+                link.classList.add('active');
             }
-            const saved = localStorage.getItem('theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            applyTheme(saved);
-            document.getElementById('themeToggle').addEventListener('click', () => {
-                applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+        /* ── Hamburger Drawer ── */
+        const hamburger = document.getElementById('hamburger');
+        const drawer = document.getElementById('mobileDrawer');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            drawer.classList.toggle('open');
+            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+        });
+        drawer.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                drawer.classList.remove('open');
+                document.body.style.overflow = '';
             });
-        </script>
-        <script>
+        });
+        /* Toggle a dropdown sub-menu open / closed */
+        function toggleMenu(item) {
+            /* Find the <ul class="sub-menu"> right after this item */
+            const subMenu = item.nextElementSibling;
+            /* Toggle the "open" class on both the button and the list */
+            item.classList.toggle('open');
+            subMenu.classList.toggle('open');
+        }
+    </script>
 
-            /* ── Nav Active State (works across separate HTML pages) ── */
-            const navLinks = document.querySelectorAll('.header > ul > li > a');
-
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                }
-            }); 
-            /* ── Hamburger Drawer ── */
-            const hamburger = document.getElementById('hamburger');
-            const drawer = document.getElementById('mobileDrawer');
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('open');
-                drawer.classList.toggle('open');
-                document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
-            });
-            drawer.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', () => {
-                    hamburger.classList.remove('open');
-                    drawer.classList.remove('open');
-                    document.body.style.overflow = '';
-                });
-            });
-            /* Toggle a dropdown sub-menu open / closed */
-            function toggleMenu(item) {
-                /* Find the <ul class="sub-menu"> right after this item */
-                const subMenu = item.nextElementSibling;
-                /* Toggle the "open" class on both the button and the list */
-                item.classList.toggle('open');
-                subMenu.classList.toggle('open');
-            }
-        </script>
-    
 </body>
+
 </html>
