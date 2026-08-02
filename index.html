@@ -24,6 +24,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     <!-- In your <head> -->
+    <!-- Flatpickr (date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Choices.js (clean select dropdowns) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 </head>
 
 <body>
@@ -1022,6 +1026,11 @@
             }
         });
 
+
+        /* ── Register buttons -> go to register.html ── */
+        document.querySelectorAll('#registerbtn, .drawer-register').forEach(btn => {
+            btn.addEventListener('click', () => window.location.href = 'register.html');
+        });
 
         /* ── Hamburger Drawer ── */
         const hamburger = document.getElementById('hamburger');
