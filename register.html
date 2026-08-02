@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Register for courses at ICT Professional Training Center. Fill out the form to start your ICT professional journey in Phnom Penh.">
+    <title>Register | ICT Professional Training Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./asset/images/ICTLogo9.jpg" type="image/jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <!-- In your <head> -->
+    <!-- Flatpickr (date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Choices.js (clean select dropdowns) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="schoollogo">
+
+                <!-- a tag with logo and tittle -->
+                <a href="index.html">
+                    <img src="./asset/images/ICTLogo9.jpg" alt="navimg">
+                </a>
+                <h2>ICT PROFESSIONAL<br><span> TRAINING CENTER</span></h2>
+            </div>
+
+            <!-- Desktop nav -->
+            <ul>
+                <li class="dropdown">
+                    <a href="course.html" class="dropbtn" title="Click Me">Course</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-column">
+                            <div class="has-submenu">
+                                <a href="#">Programming<span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">C++</a>
+                                    <a href="course-detail.html">C#</a>
+                                    <a href="course-detail.html">Java I</a>
+                                    <a href="course-detail.html">Java II</a>
+                                    <a href="course-detail.html">Python</a>
+                                    <a href="course-detail.html">DevOps</a>
+                                    <a href="course-detail.html">Project Managerment</a>
+                                    <a href="course-detail.html">Software Development with Python</a>
+                                    <a href="course-detail.html">Software Development with C++</a>
+                                    <a href="course-detail.html">Software Development with Java</a>
+                                </div>
+                            </div>
+                            <div class="has-submenu">
+                                <a href="#">Website <span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">Web Frontend</a>
+                                    <a href="course-detail.html">Web Backend</a>
+                                    <a href="course-detail.html">Full Stack Development</a>
+                                    <a href="course-detail.html">Web Backend(Node js)</a>
+                                </div>
+                            </div>
+                            <div class="has-submenu">
+                                <a href="#">Design <span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">UI / UX</a>
+                                    <a href="course-detail.html">Graphic Design</a>
+                                    <a href="course-detail.html">Video Editor</a>
+                                </div>
+                            </div>
+                            <div class="has-submenu">
+                                <a href="#">Data <span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">Data Managerment System</a>
+                                    <a href="course-detail.html">Data Analytic</a>
+                                    <a href="course-detail.html">Machine Learning</a>
+                                    <a href="course-detail.html">Deep Learning</a>
+                                    <a href="course-detail.html">Power BI</a>
+                                </div>
+                            </div>
+                            <div class="has-submenu">
+                                <a href="#">Computer Office<span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">Microsoft Office</a>
+                                    <a href="course-detail.html">Advance Excel</a>
+                                    <a href="course-detail.html">Excel VBA</a>
+                                </div>
+                            </div>
+                            <div class="has-submenu">
+                                <a href="#">Networking<span>›</span></a>
+                                <div class="submenu">
+                                    <a href="course-detail.html">Networking CCNA</a>
+                                    <a href="course-detail.html">Advance Networking</a>
+                                    <a href="course-detail.html">Cyber Security</a>
+                                    <a href="course-detail.html">Cloud Computing</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+
+            <button class="theme-toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+            <div class="navbtn">
+                <button id="registerbtn">Register</button>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- ═══ MOBILE DRAWER ═══ -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="acc-img">
+                <img src="/asset/images/staff/Theary.jpg" alt="account-img-mobile">
+                <div class="name-userr">
+                    <p>Uy sotheary</p>
+                    <span>Student</span>
+                </div>
+            </div>
+            <nav>
+                <div class="course-mobile-dropdown">
+                    <h4><a href="course-detail.html" style="text-decoration: none;">Course</a></h4>
+                    <ul>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Programming
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html">C++</a></li>
+                                <li><a href="course-detail.html">C#</a></li>
+                                <li><a href="course-detail.html">Java Programming I</a></li>
+                                <li><a href="course-detail.html">Java Programming II</a></li>
+                                <li><a href="course-detail.html">Python Programming</a></li>
+                                <li><a href="course-detail.html">DevOps</a></li>
+                                <li><a href="course-detail.html">Project Managerment</a></li>
+                                <li><a href="course-detail.html">Software Development with C++</a></li>
+                                <li><a href="course-detail.html">Software Development with Java</a></li>
+                                <li><a href="course-detail.html">Software Development with Python</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Posts (has dropdown) -->
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Website
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html">Web Frontend</a></li>
+                                <li><a href="course-detail.html">Web Backend</a></li>
+                                <li><a href="course-detail.html">Full Stack Development</a></li>
+                                <li><a href="course-detail.html">Web Backend (Node js)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Design
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html">UX/UI Design</a></li>
+                                <li><a href="course-detail.html">Graphic Design</a></li>
+                                <li><a href="course-detail.html">Video Editor</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Data Course
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html">Data Managerment System</a></li>
+                                <li><a href="course-detail.html">Data Analytic</a></li>
+                                <li><a href="course-detail.html">Machine Learning</a></li>
+                                <li><a href="course-detail.html">Deep Learning</a></li>
+                                <li><a href="course-detail.html">Power BI</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Computer Office
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html">Microsoft Office</a></li>
+                                <li><a href="course-detail.html">Advance Excel</a></li>
+                                <li><a href="course-detail.html">Excel VBA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="menu-item" onclick="toggleMenu(this)">
+                                Computer Office
+                                <span class="arrow-one">▼</span>
+                            </div>
+                            <ul class="sub-menu">
+                                <li><a href="course-detail.html"></a></li>
+                                <li><a href="course-detail.html">Networking CCNA</a></li>
+                                <li><a href="course-detail.html">Cyber Security</a></li>
+                                <li><a href="course-detail.html">Cloud Computing</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="project.html">
+                            Project
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="drawer-btns">
+                <button class="drawer-register">Register</button>
+            </div>
+        </div>
+
+        <!-- ═══ REGISTRATION PAGE ═══ -->
+        <div class="register-hero" data-aos="fade-up">
+            <h1>Register for a Course</h1>
+            <p>Fill in your details below and our team will contact you on Telegram or Facebook to confirm your
+                enrollment.</p>
+        </div>
+
+        <div class="register-wrap">
+            <div class="register-card" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Step progress -->
+                <div class="rf-progress">
+                    <div class="rf-step-indicator active" data-step-indicator="1">
+                        <span class="rf-step-num">1</span>
+                        <span class="rf-step-label">Your Information</span>
+                    </div>
+                    <div class="rf-step-line" id="rfLine1"></div>
+                    <div class="rf-step-indicator" data-step-indicator="2">
+                        <span class="rf-step-num">2</span>
+                        <span class="rf-step-label">Course &amp; Schedule</span>
+                    </div>
+                </div>
+
+                <form id="registerForm" novalidate>
+
+                    <!-- ── STEP 1: USER INFORMATION ── -->
+                    <div class="rf-step" data-step="1">
+
+                        <div class="rf-row">
+                            <div class="rf-group">
+                                <label for="fullName">Full Name (English)</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="e.g. Sok Dara"
+                                    data-required>
+                                <span class="rf-error-msg">Please enter your full name</span>
+                            </div>
+                            <div class="rf-group">
+                                <label for="khmerName">Khmer Name</label>
+                                <input type="text" id="khmerName" name="khmerName" placeholder="ឧ. សុខ ដារា"
+                                    data-required>
+                                <span class="rf-error-msg">Please enter your Khmer name</span>
+                            </div>
+                        </div>
+
+                        <div class="rf-row">
+                            <div class="rf-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="text" id="dob" name="dob" placeholder="Select date" data-required
+                                    autocomplete="off">
+                                <span class="rf-error-msg">Please select your date of birth</span>
+                            </div>
+                            <div class="rf-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" data-required>
+                                    <option value="" disabled selected>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="rf-error-msg">Please select your gender</span>
+                            </div>
+                        </div>
+
+                        <div class="rf-row">
+                            <div class="rf-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0XX XXX XXX" data-required>
+                                <span class="rf-error-msg">Please enter a valid phone number</span>
+                            </div>
+                            <div class="rf-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" data-required>
+                                <span class="rf-error-msg">Please enter a valid email</span>
+                            </div>
+                        </div>
+
+                        <div class="rf-row">
+                            <div class="rf-group">
+                                <label for="telegram">Telegram <span class="rf-optional">(username or
+                                        link)</span></label>
+                                <input type="text" id="telegram" name="telegram" placeholder="@yourusername">
+                            </div>
+                            <div class="rf-group">
+                                <label for="facebook">Facebook <span class="rf-optional">(name or profile
+                                        link)</span></label>
+                                <input type="text" id="facebook" name="facebook" placeholder="facebook.com/yourname">
+                            </div>
+                        </div>
+                        <span class="rf-error-msg rf-contact-warn" id="contactWarn">Please provide at least one:
+                            Telegram or Facebook, so we can reach you.</span>
+
+                        <div class="rf-nav">
+                            <span></span>
+                            <button type="button" class="rf-next" data-goto="2">Next: Course &amp; Schedule
+                                <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ── STEP 2: COURSE & SCHEDULE ── -->
+                    <div class="rf-step" data-step="2" hidden>
+
+                        <div class="rf-group">
+                            <label>Course of Interest</label>
+
+                            <div class="course-filter" id="courseFilter"></div>
+
+                            <div class="course-grid" id="courseGrid"></div>
+
+                            <input type="hidden" id="course" name="course" data-required>
+                            <span class="rf-error-msg" id="courseErrorMsg">Please select a course</span>
+                        </div>
+
+                        <div class="rf-group" id="scheduleSection" hidden>
+                            <label>Available Schedule <span class="rf-optional" id="scheduleHint"></span></label>
+
+                            <div class="schedule-grid" id="scheduleGrid"></div>
+
+                            <input type="hidden" id="schedule" name="schedule" data-required>
+                            <span class="rf-error-msg" id="scheduleErrorMsg">Please select a schedule</span>
+                        </div>
+
+                        <div class="rf-group">
+                            <label for="message">Message <span class="rf-optional">(optional)</span></label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us anything else we should know..."></textarea>
+                        </div>
+
+                        <div class="rf-checkbox">
+                            <input type="checkbox" id="terms" name="terms" data-required>
+                            <label for="terms">I agree to be contacted by ICT Professional Training Center regarding
+                                my registration.</label>
+                        </div>
+                        <span class="rf-error-msg" id="termsWarn">Please accept to be contacted before
+                            submitting.</span>
+
+                        <div class="rf-nav">
+                            <button type="button" class="rf-back" data-goto="1">
+                                <i class="fa-solid fa-arrow-left"></i> Back</button>
+                            <button type="submit" class="rf-submit">
+                                <span class="btn-label">Submit Registration</span>
+                                <span class="btn-spinner"><span class="spinner-circle"></span></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- Success message shown after submit -->
+                <div class="rf-success" id="rfSuccess">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Thank You for Registering!</h3>
+                    <p>We've received your information. Our team will contact you shortly on
+                        <strong id="rfContactChannel">Telegram or Facebook</strong> to confirm your enrollment and
+                        class schedule.
+                    </p>
+                    <a href="index.html" class="rf-back-btn">Back to Home</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="brand-row">
+                        <img class="footerimg" src="./asset/images/ICTLogo9.jpg" alt="">
+                        <span class="brand-name">ICT Center</span>
+                    </div>
+                    <p class="brand-tagline">Empowering professionals through world-class ICT education since 2020.</p>
+                    <div class="socials">
+                        <a href="https://web.facebook.com/profile.php?id=61551254861573#" class="social-btn"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://t.me/ICTprofessionlcenter" class="social-btn"><i
+                                class="fab fa-telegram-plane"></i></a>
+                        <a href="https://www.tiktok.com/@ict.center" class="social-btn"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="footer-col">
+                    <h4>About ICT</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">All Course</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Course -->
+                <div class="footer-col">
+                    <h4>Popular Course</h4>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Data Science</li>
+                        <li>Cybersecurity</li>
+                        <li>Web Development</li>
+                        <li>UX/UI Design</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span class="contact-text"><a href="#">ផ្លូវលេខ240B ផ្លូវ132 ភូមិ06 សង្កាត់ទឹក ល្អក់ទី01
+                                ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <span class="contact-text">092 702 175 / 096 287 5270</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <span class="contact-text">ICTCenter@gmail.com</span>
+                    </div>
+                </div>
+
+                <!-- Download App -->
+                <div class="footer-col app-col">
+                    <h4>Download App</h4>
+                    <p class="app-desc">Download our app from the App Store and Google Play Store.</p>
+                    <div class="mb-2">
+                        <img src="./asset/images/footer/appstore.svg" alt="">
+                    </div>
+                    <div>
+                        <img src="./asset/images/footer/playstore.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- end .container -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+    </script>
+
+    <!-- Dark/Light Mode Script -->
+    <script>
+        const html = document.documentElement;
+        function applyTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            document.getElementById('themeIcon').className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            localStorage.setItem('theme', theme);
+        }
+        const saved = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        applyTheme(saved);
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+
+    <script>
+        /* ── Nav Active State ── */
+        const navLinks = document.querySelectorAll('.header > ul > li > a');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) link.classList.add('active');
+        });
+
+        /* ── Register buttons -> go to register.html ── */
+        document.querySelectorAll('#registerbtn, .drawer-register').forEach(btn => {
+            btn.addEventListener('click', () => window.location.href = 'register.html');
+        });
+
+        /* ── Hamburger Drawer ── */
+        const hamburger = document.getElementById('hamburger');
+        const drawer = document.getElementById('mobileDrawer');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            drawer.classList.toggle('open');
+            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+        });
+        drawer.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                drawer.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        /* Toggle a dropdown sub-menu open / closed (mobile) */
+        function toggleMenu(item) {
+            const subMenu = item.nextElementSibling;
+            item.classList.toggle('open');
+            subMenu.classList.toggle('open');
+        }
+    </script>
+
+    <!-- Flatpickr (date picker) -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Choices.js (clean select dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Registration Wizard Script -->
+    <script>
+        /* ── Schedule availability per course ──
+           Edit this map any time class times change; the schedule
+           dropdown on Step 2 rebuilds itself from whatever is here. */
+        const COURSE_SCHEDULES = {
+            cpp: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sat-morning', label: 'Saturday · 1:00 – 4:00 PM' }
+            ],
+            csharp: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ],
+            java1: [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' }
+            ],
+            java2: [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sun-morning', label: 'Sunday · 8:00 – 11:00 AM' }
+            ],
+            python: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' },
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ],
+            devops: [
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' },
+                { value: 'sun-morning', label: 'Sunday · 8:00 – 11:00 AM' }
+            ],
+            frontend: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' }
+            ],
+            backend: [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ],
+            fullstack: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' },
+                { value: 'sun-morning', label: 'Sunday · 8:00 – 11:00 AM' }
+            ],
+            uiux: [
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' },
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ],
+            graphic: [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' }
+            ],
+            video: [
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' }
+            ],
+            dbms: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' }
+            ],
+            'data-analytics': [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' }
+            ],
+            ml: [
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' },
+                { value: 'sun-morning', label: 'Sunday · 8:00 – 11:00 AM' }
+            ],
+            powerbi: [
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ],
+            ccna: [
+                { value: 'mwf-evening', label: 'Mon / Wed / Fri · 6:00 – 8:00 PM' },
+                { value: 'sat-morning', label: 'Saturday · 8:00 – 11:00 AM' }
+            ],
+            cybersecurity: [
+                { value: 'tth-evening', label: 'Tue / Thu · 6:00 – 8:00 PM' },
+                { value: 'sun-morning', label: 'Sunday · 8:00 – 11:00 AM' }
+            ],
+            cloud: [
+                { value: 'sat-afternoon', label: 'Saturday · 1:00 – 4:00 PM' },
+                { value: 'sun-afternoon', label: 'Sunday · 1:00 – 4:00 PM' }
+            ]
+        };
+
+        /* ── Course catalog ──
+           Edit title/icon/category here; everything else (filter tabs,
+           cards, schedule options) builds itself from this list. */
+        const COURSES = [
+            { id: 'cpp', title: 'C++', category: 'Programming', icon: 'fa-solid fa-code', hours: '48 hours' },
+            { id: 'csharp', title: 'C#', category: 'Programming', icon: 'fa-solid fa-code', hours: '48 hours' },
+            { id: 'java1', title: 'Java Programming I', category: 'Programming', icon: 'fa-brands fa-java', hours: '48 hours' },
+            { id: 'java2', title: 'Java Programming II', category: 'Programming', icon: 'fa-brands fa-java', hours: '48 hours' },
+            { id: 'python', title: 'Python Programming', category: 'Programming', icon: 'fa-brands fa-python', hours: '48 hours' },
+            { id: 'devops', title: 'DevOps', category: 'Programming', icon: 'fa-solid fa-infinity', hours: '48 hours' },
+            { id: 'frontend', title: 'Web Frontend', category: 'Website', icon: 'fa-solid fa-laptop-code', hours: '48 hours' },
+            { id: 'backend', title: 'Web Backend', category: 'Website', icon: 'fa-solid fa-server', hours: '48 hours' },
+            { id: 'fullstack', title: 'Full Stack Development', category: 'Website', icon: 'fa-solid fa-layer-group', hours: '48 hours' },
+            { id: 'uiux', title: 'UI / UX Design', category: 'Design', icon: 'fa-solid fa-pen-ruler', hours: '40 hours' },
+            { id: 'graphic', title: 'Graphic Design', category: 'Design', icon: 'fa-solid fa-palette', hours: '40 hours' },
+            { id: 'video', title: 'Video Editor', category: 'Design', icon: 'fa-solid fa-video', hours: '40 hours' },
+            { id: 'dbms', title: 'Data Management System', category: 'Data', icon: 'fa-solid fa-database', hours: '44 hours' },
+            { id: 'data-analytics', title: 'Data Analytics', category: 'Data', icon: 'fa-solid fa-chart-line', hours: '44 hours' },
+            { id: 'ml', title: 'Machine Learning', category: 'Data', icon: 'fa-solid fa-brain', hours: '48 hours' },
+            { id: 'powerbi', title: 'Power BI', category: 'Data', icon: 'fa-solid fa-chart-pie', hours: '36 hours' },
+            { id: 'ccna', title: 'Networking CCNA', category: 'Networking', icon: 'fa-solid fa-network-wired', hours: '48 hours' },
+            { id: 'cybersecurity', title: 'Cyber Security', category: 'Networking', icon: 'fa-solid fa-shield-halved', hours: '44 hours' },
+            { id: 'cloud', title: 'Cloud Computing', category: 'Networking', icon: 'fa-solid fa-cloud', hours: '40 hours' }
+        ];
+
+        /* ── Init clean plugin inputs ── */
+        flatpickr('#dob', {
+            dateFormat: 'Y-m-d',
+            altInput: true,
+            altFormat: 'F j, Y',
+            maxDate: 'today',
+            defaultDate: null,
+            disableMobile: true
+        });
+
+        const genderChoices = new Choices('#gender', {
+            searchEnabled: false,
+            itemSelectText: '',
+            shouldSort: false
+        });
+
+        /* ── Course cards + category filter ── */
+        const courseFilterEl = document.getElementById('courseFilter');
+        const courseGridEl = document.getElementById('courseGrid');
+        const courseInput = document.getElementById('course');
+        const courseErrorMsg = document.getElementById('courseErrorMsg');
+
+        const scheduleSection = document.getElementById('scheduleSection');
+        const scheduleGridEl = document.getElementById('scheduleGrid');
+        const scheduleInput = document.getElementById('schedule');
+        const scheduleHint = document.getElementById('scheduleHint');
+        const scheduleErrorMsg = document.getElementById('scheduleErrorMsg');
+
+        const CATEGORIES = ['All', ...new Set(COURSES.map(c => c.category))];
+        let currentFilter = 'All';
+
+        courseFilterEl.innerHTML = CATEGORIES.map(cat =>
+            `<button type="button" class="cf-btn${cat === 'All' ? ' active' : ''}" data-filter="${cat}">${cat}</button>`
+        ).join('');
+
+        function renderCourseGrid() {
+            const list = currentFilter === 'All' ? COURSES : COURSES.filter(c => c.category === currentFilter);
+            courseGridEl.innerHTML = list.map(c => `
+                <button type="button" class="course-card${c.id === courseInput.value ? ' selected' : ''}" data-course="${c.id}">
+                    <span class="cc-check"><i class="fa-solid fa-circle-check"></i></span>
+                    <span class="cc-icon"><i class="${c.icon}"></i></span>
+                    <span class="cc-title">${c.title}</span>
+                    <span class="cc-meta"><span class="cc-category">${c.category}</span><span class="cc-hours">${c.hours}</span></span>
+                </button>`).join('');
+        }
+        renderCourseGrid();
+
+        courseFilterEl.addEventListener('click', e => {
+            const btn = e.target.closest('.cf-btn');
+            if (!btn) return;
+            currentFilter = btn.dataset.filter;
+            courseFilterEl.querySelectorAll('.cf-btn').forEach(b => b.classList.toggle('active', b === btn));
+            renderCourseGrid();
+        });
+
+        function updateScheduleSection() {
+            const options = COURSE_SCHEDULES[courseInput.value] || [];
+            const course = COURSES.find(c => c.id === courseInput.value);
+
+            if (!courseInput.value || !options.length) {
+                scheduleSection.hidden = true;
+                scheduleInput.value = '';
+                return;
+            }
+
+            scheduleSection.hidden = false;
+            scheduleHint.textContent = `for ${course.title}`;
+
+            // Keep the previous schedule pick only if it's still valid for this course
+            if (!options.find(o => o.value === scheduleInput.value)) {
+                scheduleInput.value = '';
+            }
+
+            scheduleGridEl.innerHTML = options.map(o => `
+                <button type="button" class="schedule-chip${o.value === scheduleInput.value ? ' selected' : ''}" data-schedule="${o.value}">
+                    <i class="fa-regular fa-clock"></i> ${o.label}
+                </button>`).join('');
+        }
+
+        courseGridEl.addEventListener('click', e => {
+            const card = e.target.closest('.course-card');
+            if (!card) return;
+            courseInput.value = card.dataset.course;
+            courseGridEl.querySelectorAll('.course-card').forEach(c => c.classList.toggle('selected', c === card));
+            courseGridEl.classList.remove('rf-error');
+            courseErrorMsg.classList.remove('show');
+            updateScheduleSection();
+            scheduleSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        scheduleGridEl.addEventListener('click', e => {
+            const chip = e.target.closest('.schedule-chip');
+            if (!chip) return;
+            scheduleInput.value = chip.dataset.schedule;
+            scheduleGridEl.querySelectorAll('.schedule-chip').forEach(c => c.classList.toggle('selected', c === chip));
+            scheduleGridEl.classList.remove('rf-error');
+            scheduleErrorMsg.classList.remove('show');
+        });
+
+        /* ── Wizard step navigation ── */
+        const steps = document.querySelectorAll('.rf-step');
+        const indicators = document.querySelectorAll('.rf-step-indicator');
+        const rfLine1 = document.getElementById('rfLine1');
+
+        function goToStep(stepNum) {
+            steps.forEach(s => s.hidden = s.dataset.step !== String(stepNum));
+            indicators.forEach(ind => {
+                const n = Number(ind.dataset.stepIndicator);
+                const completed = n < stepNum;
+                ind.classList.toggle('active', n === stepNum);
+                ind.classList.toggle('completed', completed);
+                ind.querySelector('.rf-step-num').innerHTML = completed
+                    ? '<i class="fa-solid fa-check"></i>'
+                    : n;
+            });
+            rfLine1.classList.toggle('completed', stepNum > 1);
+            document.querySelector('.register-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function validateStep(stepEl) {
+            let valid = true;
+
+            stepEl.querySelectorAll('[data-required]').forEach(field => {
+                if (field.id === 'course' || field.id === 'schedule') return; // handled separately below
+                let ok = field.value.trim() !== '';
+                if (field.type === 'email' && ok) {
+                    ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+                }
+                if (field.type === 'tel' && ok) {
+                    ok = /^[0-9+\-\s()]{7,}$/.test(field.value);
+                }
+                field.classList.toggle('rf-error', !ok);
+                if (!ok) valid = false;
+
+                // Reflect state on the Choices.js wrapper if this field is a <select>
+                const wrapper = field.closest('.rf-group')?.querySelector('.choices');
+                if (wrapper) wrapper.classList.toggle('rf-error', !ok);
+            });
+
+            // Step 2: course card + schedule chip selection
+            if (stepEl.dataset.step === '2') {
+                const courseOk = courseInput.value.trim() !== '';
+                courseGridEl.classList.toggle('rf-error', !courseOk);
+                courseErrorMsg.classList.toggle('show', !courseOk);
+                if (!courseOk) valid = false;
+
+                if (courseOk) {
+                    const scheduleOk = scheduleInput.value.trim() !== '';
+                    scheduleGridEl.classList.toggle('rf-error', !scheduleOk);
+                    scheduleErrorMsg.classList.toggle('show', !scheduleOk);
+                    if (!scheduleOk) valid = false;
+                }
+            }
+
+            // Step 1: require at least one contact channel
+            if (stepEl.dataset.step === '1') {
+                const tg = document.getElementById('telegram').value.trim();
+                const fb = document.getElementById('facebook').value.trim();
+                const warn = document.getElementById('contactWarn');
+                const hasContact = tg !== '' || fb !== '';
+                warn.classList.toggle('show', !hasContact);
+                if (!hasContact) valid = false;
+            }
+
+            // Step 2: terms checkbox
+            if (stepEl.dataset.step === '2') {
+                const terms = document.getElementById('terms');
+                const termsWarn = document.getElementById('termsWarn');
+                const ok = terms.checked;
+                termsWarn.classList.toggle('show', !ok);
+                if (!ok) valid = false;
+            }
+
+            return valid;
+        }
+
+        document.querySelectorAll('.rf-next').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const currentStep = btn.closest('.rf-step');
+                if (validateStep(currentStep)) {
+                    goToStep(Number(btn.dataset.goto));
+                }
+            });
+        });
+
+        document.querySelectorAll('.rf-back').forEach(btn => {
+            btn.addEventListener('click', () => goToStep(Number(btn.dataset.goto)));
+        });
+
+        /* ── Submit ── */
+        const registerForm = document.getElementById('registerForm');
+        const rfSuccess = document.getElementById('rfSuccess');
+        const submitBtn = registerForm.querySelector('.rf-submit');
+
+        registerForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const step2 = document.querySelector('.rf-step[data-step="2"]');
+            if (!validateStep(step2)) return;
+
+            // Build the payload — replace this block with a fetch() call
+            // to your backend/API when ready.
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                khmerName: document.getElementById('khmerName').value,
+                dob: document.getElementById('dob').value,
+                gender: document.getElementById('gender').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                telegram: document.getElementById('telegram').value,
+                facebook: document.getElementById('facebook').value,
+                course: document.getElementById('course').value,
+                schedule: document.getElementById('schedule').value,
+                message: document.getElementById('message').value
+            };
+
+            // Show a loading state on the button while the "request" runs.
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Simulate a network call — replace this timeout with your
+            // actual fetch()/API call, and move the code below into its
+            // .then() so the success screen only shows once it truly succeeds.
+            setTimeout(() => {
+                console.log('Registration submitted:', formData);
+
+                // Personalize the thank-you message with whichever channel they gave
+                const channel = formData.telegram && formData.facebook
+                    ? 'Telegram or Facebook'
+                    : (formData.telegram ? 'Telegram' : 'Facebook');
+                document.getElementById('rfContactChannel').textContent = channel;
+
+                // Smoothly fade the form out, then fade the success message in.
+                registerForm.classList.add('rf-fade-out');
+
+                setTimeout(() => {
+                    registerForm.hidden = true;
+                    document.querySelector('.rf-progress').hidden = true;
+                    rfSuccess.classList.add('show');
+                }, 350);
+            }, 1100);
+        });
+    </script>
+</body>
+
+</html>
