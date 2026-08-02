@@ -541,13 +541,13 @@
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="project.html">Project</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="theme-toggle-btn" id="themeToggle">
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
             <div class="navbtn">
-                <button id="loginbtn">Login</button>
                 <button id="registerbtn">Register</button>
             </div>
 
@@ -657,6 +657,11 @@
                     <li>
                         <a href="about.html">
                             About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="project.html">
+                            Project
                         </a>
                     </li>
                     <li>
@@ -850,6 +855,19 @@
             });
         </script>
         <script>
+
+            /* ── Nav Active State (works across separate HTML pages) ── */
+            const navLinks = document.querySelectorAll('.header > ul > li > a');
+
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            }); 
             /* ── Hamburger Drawer ── */
             const hamburger = document.getElementById('hamburger');
             const drawer = document.getElementById('mobileDrawer');

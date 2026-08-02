@@ -3,7 +3,11 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* html{
+  scroll-behavior: smooth;
+} */
 
 .container {
   width: 100% !important;
@@ -65,6 +69,7 @@
   margin-bottom: 0;
   list-style: none;
   flex: 1;
+  gap: 10px;
 }
 
 .header > ul > li {
@@ -81,11 +86,13 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color 0.8s ease, color 0.6s ease, transform 0.15s ease;
 }
 
-.header li a:hover,
-.dropdown:hover .dropbtn {
-  color: rgb(71,108,220);
+
+/* .dropdown:hover .dropbtn, */
+.submenu a:hover {
+  color:rgb(71,108,220);
 }
 
 /* --- Level 1 dropdown --- */
@@ -95,7 +102,7 @@
   position: relative;
 }
 
-.header .dropdown-content {
+/* .header .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
@@ -105,18 +112,53 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 200;
   border-top: 3px solid rgb(71,108,220);
-  /* blue top accent like the image */
 }
 
 .dropdown:hover .dropdown-content {
   display: flex;
-  /* side-by-side columns */
+} */
+
+.header .dropdown-content {
+  /* was: display: none; */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 200;
+  border-top: 3px solid rgb(71,108,220);
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  /* was: display: flex; */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: flex; /* still needed so columns lay out side-by-side once visible */
 }
 
 .dropdown-column {
   display: flex;
   flex-direction: column;
   min-width: 200px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* stagger each column so they fade in one after another, not all at once */
+.dropdown-column:nth-child(1){ transition-delay: 0.05s; }
+.dropdown-column:nth-child(2){ transition-delay: 0.1s; }
+.dropdown-column:nth-child(3){ transition-delay: 0.15s; }
+
+.dropdown:hover .dropdown-column {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-column > a,
@@ -170,6 +212,17 @@
 .submenu a:hover {
   background-color: #e6e5e5;
   color: rgb(71,108,220);
+}
+
+.header > ul > li > a.active,
+.header > ul > li.dropdown > .dropbtn.active,
+.header > ul > li.dropdown.active > .dropbtn {
+    color: rgb(71,108,220);
+    transform: scale(1.03);
+}
+
+.header > ul > li > a:active{
+    transform: scale(0.96);
 }
 
 /* HAMBURGER  — hidden */
@@ -535,15 +588,15 @@ nav .course-mobile-dropdown h4:hover {
 } */
 
 
-.header a,
+/* .header a,
 .dropbtn {
   color: var(--nav-link) !important;
-}
+} */
 
-.header li a:hover,
+/* .header li a:hover,
 .dropdown:hover .dropbtn {
   color: var(--nav-hover) !important;
-}
+} */
 
 .header .dropdown-content {
   background: var(--dd-bg);
@@ -567,6 +620,10 @@ nav .course-mobile-dropdown h4:hover {
 
 [data-theme="dark"] body {
   background: #0f172a;
+  color: #f1f5f9;
+}
+[data-theme="dark"] .header a,
+.dropbtn{
   color: #f1f5f9;
 }
 
@@ -622,6 +679,22 @@ nav .course-mobile-dropdown h4:hover {
 
 [data-theme="dark"] .timeline::before {
   border: 1px solid #eff0f1;
+}
+
+[data-theme="dark"]  .card-body-blog p{
+  color: rgb(230, 229, 229);
+}
+
+[data-theme="dark"] .portfolio-body p {
+  color: rgb(230, 229, 229);
+}
+
+[data-theme="dark"] .portfolio-footer .portfolio-author div strong{
+  color: rgb(230, 229, 229);
+}
+
+[data-theme="dark"] .portfolio-stats{
+  color: rgb(230, 229, 229);
 }
 
 /* ── THEME TOGGLE BUTTON ── */
@@ -857,7 +930,7 @@ nav .course-mobile-dropdown h4:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgb(209, 208, 208);
+  box-shadow: inset 0 0 10px 0 #bababa80;
   border-radius: 10px;
 }
 
@@ -1162,7 +1235,7 @@ nav .course-mobile-dropdown h4:hover {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 25px;
   padding: 20px;
   width: 94%;
   margin: 0 auto;
@@ -1239,10 +1312,12 @@ nav .course-mobile-dropdown h4:hover {
   padding: 1% 8px;
   width: auto;
   margin-left: auto;
+  background: rgba(255, 255, 255, 0.7);
+  color: #0087fe;
   font-weight: 600;
-  background-color: rgb(226,240,252);
-  border: 1px solid rgb(196,196,254);
-  border-radius: 5px;
+  /* background-color: rgb(226,240,252); */
+  border: 1px solid rgb(63, 104, 252);
+  border-radius: 10px;
   cursor: pointer;
   font-size: 11px;
 }
@@ -1374,6 +1449,9 @@ nav .course-mobile-dropdown h4:hover {
   position: relative;
   overflow: hidden;
   border: 1px solid white;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .boxx img {
@@ -1463,7 +1541,7 @@ nav .course-mobile-dropdown h4:hover {
 
 .aboutschool {
   width: 96%;
-  height: 100vh;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1473,7 +1551,7 @@ nav .course-mobile-dropdown h4:hover {
 
 .aboutschool .text {
   width: 50%;
-  height: 450px;
+  height: 390px;
   padding: 10px;
 }
 
@@ -1502,12 +1580,13 @@ nav .course-mobile-dropdown h4:hover {
   width: 260px;
   height: 110px;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid rgb(224, 221, 221);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   position: relative;
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
 
 .typecategory .fa-regular.fa-clock,
@@ -1546,7 +1625,7 @@ nav .course-mobile-dropdown h4:hover {
   border-radius: 10px;
   height: 260px;
   padding: 20px;
-  margin: 0 auto;
+  margin: 80px auto;
   display: flex;
   box-shadow: 0px 2px 6px 4px rgba(54, 54, 54, 0.3);
   position: relative;
@@ -2375,30 +2454,63 @@ textarea {
 }
 
 .overview-section .overview-information-instruction {
-  width: 44%;
-  margin-left: 120px;
+  width: 72%;
+  max-width: 500px;
+  margin-left: 160px;
   cursor: pointer;
 }
 
 .overview-section .overview-information-instruction ul {
+  box-shadow: 0 0 10px 0 rgb(209, 208, 208);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 60px;
+  padding: 12px 18px;
+  background-color: #fff;
   display: flex;
-  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .overview-section .overview-information-instruction ul li {
   text-decoration: none;
   list-style-type: none;
-  margin-top: 15px;
   cursor: pointer;
-  padding-bottom: 6px;
+  padding: 8px 16px;
+  min-width: 110px;
+  min-height: 38px;
   color: #333;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.overview-section .overview-information-instruction ul li:hover {
+  background-color: #f0f6ff;
+  color: #0d6efd;
+  transform: translateY(-2px);
 }
 
 .overview-section .overview-information-instruction ul li.active {
-  color: #007bff;
-  border-bottom: 3px solid #007bff;
+  background-color: #0d6efd;
+  color: white;
   font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  transform: translateY(-1px);
 }
 
 .section-oci section {
@@ -2431,10 +2543,12 @@ textarea {
 
 .section-oci .active #what-you-learn {
   width: 80%;
-  border: 1px solid rgb(180, 180, 180);
+  /* border: 1px solid rgb(180, 180, 180); */
+  box-shadow: 0px 0px 6px 0px rgb(186, 186, 186);
   padding: 20px;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  /* margin-bottom: 30px; */
 }
 
 #what-you-learn .text-detail-block {
@@ -2474,23 +2588,61 @@ textarea {
   position: sticky;
   top: 94px;
   width: 30%;
-  height: 430px;
-  max-height: 440px;
+  max-width: 380px;
+  min-width: 300px;
+  height: 630px;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgb(210, 210, 210);
 }
 
 .detail-body .boxcard img {
-  height: 177px;
-  max-height: 190px;
+  max-width: 100%;
+  height: auto;
+  /* aspect-ratio: 4 / 4; */
+  /* height: 177px;
+  max-height: 190px; */
+}
+.coursedetail-price-rating{
+  display: flex;
+  gap: 40px;
+}
+
+.coursedetail-price-rating{
+  h3{
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+  }
+  .starate{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: 10px;
+  }
+  .starate p{
+    margin-top: 15px;
+    padding-right: 1px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .starate i{
+    font-size: 14px;
+  }
 }
 
 .detail-body button {
   height: 50px;
-  width: 90%;
-  margin: auto;
+  width: 100%;
   background-color: #007bff;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -2499,25 +2651,17 @@ textarea {
   color: white;
 }
 
-.detail-body .boxcard h3 {
-  color: rgb(1, 154, 1);
-  font-size: 17px;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 5px;
-}
-
 .detail-body .boxcard .fav-share {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 6px;
+  justify-content: space-between;
+  margin-top: 16px;
 }
 
 .detail-body .boxcard .fav-share .fav,
 .share {
-  width: 42%;
-  height: 30px;
-  gap: 9px;
+  width: 49%;
+  height: 40px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -2530,7 +2674,7 @@ textarea {
 .share p {
   padding-top: 13px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .detail-body .boxcard .certificate-completed {
@@ -2539,34 +2683,71 @@ textarea {
   border-radius: 5px;
   margin-top: 10px;
   display: flex;
-  padding-left: 13px;
+  padding-left: 3px;
   gap: 4px;
 }
 
 .detail-body .boxcard .certificate-completed i {
   margin-top: 6px;
   color: black;
+  font-size: 20px;
+  padding-right: 1px;
 }
 
 .detail-body .boxcard .certificate-completed p {
-  font-size: 12px;
-  margin-top: 4px;
+  font-size: 17px;
+  margin-top: 2px;
   font-weight: 600;
   height: 2px;
   color: rgb(75, 74, 74);
 }
+#includes-course{
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 10px;
+  height: 30px;
+}
+.hour-with-icon{
+  display: flex;
+  gap: 6px;
+  height: 20px;
+  margin-top: -10px;
+
+  i{
+    font-size: 18px;
+    margin-top: 4px;
+    color: #7b7c7d;
+  }
+
+  .hour{
+    font-weight: 600;
+    color: #7b7c7d;;
+
+  }
+}
+.detail-body .boxcard .weekschedule {
+  p{
+    font-size: 14px;
+    color: #7b7c7d;
+  }
+  i{
+    color: #7b7c7d;
+  }
+}
 
 .detail-body .boxcard .pweekly {
   height: 85px;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 /* ====================================curriculum-block-start=========================================== */
 
 .curriculum-setion {
-  width: 90%;
+  width: 82%;
   display: flex;
   justify-content: space-between;
+  margin-left: 40px;
 }
 
 .curriculum-setion p {
@@ -2600,15 +2781,16 @@ textarea {
 }
 
 .acc-item {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #afaeae;
   border-radius: 10px;
   margin-bottom: 8px;
   overflow: hidden;
-  background: #fff;
+  /* background: #f26f6f; */
   width: 90%;
 }
 
 .acc-item label {
+  background-color: #f2f7ff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2618,7 +2800,7 @@ textarea {
 }
 
 .acc-item label:hover {
-  background: #f9f9f9;
+  background:#f2f6ff;
 }
 
 .acc-left {
@@ -2626,6 +2808,10 @@ textarea {
   align-items: center;
   gap: 10px;
   /* flex: 1; */
+}
+.acc-left span{
+  font-size: 16px;
+
 }
 
 .arrow-key {
@@ -2655,6 +2841,7 @@ textarea {
 .acc-body {
   max-height: 0;
   overflow: hidden;
+  background-color: white;
   transition: max-height 0.3s ease;
 }
 
@@ -2672,7 +2859,7 @@ input[type="checkbox"]:checked + .acc-item .acc-body {
   max-height: 200px;
 }
 
-input[type="checkbox"]:checked + .acc-item label .arrow {
+input[type="checkbox"]:checked + .acc-item label .arrow-key {
   transform: rotate(225deg);
   margin-top: 3px;
 }
@@ -2683,10 +2870,12 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
 .profile-card {
   width: 93%;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(47, 58, 82, 0.2);
   /* max-width:900px; */
   /* margin:auto; */
   /* background:#fff; */
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -2783,8 +2972,19 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   /* Overview nav */
 
   .overview-section .overview-information-instruction {
-    width: 60%;
-    margin-left: 40px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .overview-section .overview-information-instruction ul {
+    gap: 12px;
+    padding: 10px 14px;
+  }
+
+  .overview-section .overview-information-instruction ul li {
+    min-width: 96px;
+    padding: 8px 12px;
   }
 
   /* Body layout */
@@ -2801,7 +3001,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
   .detail-body .boxcard {
     width: 35%;
-    height: 438px;
+    /* height: 438px; */
     max-height: none;
     position: sticky;
     top: 120px;
@@ -2877,12 +3077,18 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
   .overview-section .overview-information-instruction {
     width: 100%;
-    margin-left: 0;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .overview-section .overview-information-instruction ul {
-    gap: 30px;
-    padding-left: 0;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .overview-section .overview-information-instruction ul li {
+    min-width: 90px;
+    padding: 8px 10px;
   }
 
   /* Body layout — stack vertically */
@@ -2902,11 +3108,14 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   .detail-body .boxcard {
     width: 60%;
     margin: 0 auto;
-    height: 500px;
+    /* height: 500px; */
     position: static;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding-bottom: 16px;
+  }
+  .coursedetail-price-rating{
+    justify-content: space-around;
   }
 
   .detail-body .boxcard img {
@@ -3043,8 +3252,15 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   /* Overview nav */
 
   .overview-section .overview-information-instruction ul {
-    gap: 16px;
+    gap: 8px;
     font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .overview-section .overview-information-instruction ul li {
+    min-width: 80px;
+    padding: 7px 8px;
+    font-size: 12px;
   }
 
   /* Content text */
@@ -3065,9 +3281,9 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
   .detail-body .boxcard {
     width: 85%;
-    height: 440px;
+    height: auto;
     border-radius: 8px;
-    max-height: 450px;
+    /* max-height: 450px; */
     padding: 9px;
   }
 
@@ -3246,11 +3462,11 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   position: sticky;
   top: 120px;
   width: 100%;
-  height: 290px;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(108, 108, 108, 0.08);
-  border: 1px solid rgb(163, 163, 163);
+  border: 1px solid rgb(236, 235, 235);
   padding: 15px;
+  box-shadow:0px 0px 10px 0px rgb(199, 197, 197);
 }
 
 .radio-course .icon-filters {
@@ -3390,13 +3606,12 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 .message-by-kru-nhim {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 1.0s ease, transform 1.0s ease;
   width: 80%;
   height: auto;
   padding: 20px;
   display: flex;
-  border: 1px solid rgb(218, 218, 218);
-  box-shadow: 6px 5px 9px rgba(108, 108, 108, 0.08);
+  box-shadow: 0px 0px 9px 0px rgb(198, 198, 198);
   border-radius: 23px;
   margin: auto;
   gap: 20px;
@@ -3471,7 +3686,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
 .about-container .mision-vision .our-mision-vision-content {
   width: 48%;
-  /* height: 225px; */
+  margin-top: 50px;
   height: auto;
   padding: 25px;
   border: 1px solid rgb(218, 218, 218);
@@ -3614,10 +3829,10 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   position: relative;
   flex: 1;
   background: #f7f8fa;
-  border: 1px solid #d7d7d9;
+  /* border: 1px solid #d7d7d9; */
   border-radius: 14px;
   padding: 17px 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow:  3px 4px 12px rgba(47, 58, 82, 0.1);
   display: block;
   align-items: center;
   gap: 20px;
@@ -3750,19 +3965,19 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
 .why-choose-ict .aboutus-detail-block {
   margin: auto;
-  gap: 18px;
+  gap: 26px;
   width: 95%;
   display: grid;
+  margin-top: 16px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .why-choose-ict .aboutus-detail-block .box-category {
-  margin-top: 10px;
+  
   /* background-color: #edf2f9; */
   padding: 20px;
-  border-radius: 10px;
-  border: 1px solid rgb(225, 225, 225);
-  box-shadow: 5px 14px 16px rgba(49, 48, 48, 0.04);
+  border-radius: 16px;
+  box-shadow: inset 0 0 11px 0 rgb(203, 202, 202);
 }
 
 .why-choose-ict .aboutus-detail-block .box-category h5 {
@@ -3823,8 +4038,8 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 190px);
-  height: 2px;
+  width: calc(100% - 196px);
+  height: 3px;
   background: #c0c8e0;
   z-index: 1;
 }
@@ -3982,19 +4197,28 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   font-size: 12px;
   color: #8892a4;
   cursor: pointer;
+  transition: transform 0.8s ease;
 }
 
 /* ── Team cards appear BELOW the dept-card ── */
 
 .dept-col .team-dropdown {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
 }
 
 .team-dropdown.show {
-  display: flex;
+  max-height: 2500px;
+  opacity: 1;
+  margin-top: 12px;
+  pointer-events: auto;
 }
 
 .team-dropdown .team-member-card img {
@@ -4284,7 +4508,6 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
     /* width: 240px; */
     width: 100%;
     gap: 10px;
-    
   }
 }
 
@@ -5184,7 +5407,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   }
 
   .aboutschool {
-    height: 600px;
+    height: 500px;
   }
 }
 
@@ -5222,9 +5445,6 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
     width: 95%;
   }
 
-  .container .mainbox {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   .filter-cate-side .radio-course {
     width: 75%;
@@ -5263,7 +5483,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
   .aboutschool {
     width: 70%;
-    height: 560px;
+    height: 500px;
     padding-bottom: 30px;
     gap: 80px;
   }
@@ -5289,9 +5509,6 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
     width: 95%;
   } */
 
-  .container .mainbox {
-    grid-template-columns: repeat(6, 1fr);
-  }
 
   .container .mainbox .boxcard h2 {
     font-size: 17px;
@@ -5314,6 +5531,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   .detail-body .boxcard {
     width: 20%;
     height: 460px;
+    padding: 5px;
   }
 
   .more-course-detail .mainbox {
@@ -5353,7 +5571,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   }
 
   .aboutschool {
-    height: 690px;
+    height: 500px;
   }
 }
 
@@ -5368,7 +5586,7 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
 
 @media (min-width: 1100px) {
   .aboutschool {
-    height: 680px;
+    height: 500px;
   }
 }
 
@@ -5923,10 +6141,6 @@ input[type="checkbox"]:checked + .acc-item label .arrow {
   }
   .contact-information-with-map iframe{
     margin-top: 180px;
-  }
-
-  .location .fas {
-    /* margin: 0 auto 10px; */
   }
 
   .location p {

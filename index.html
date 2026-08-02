@@ -98,30 +98,13 @@
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="project.html">Project</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
-            <!-- <ul>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Course</a>
-                    <div class="dropdown-content">
-                        <a href="#">Website</a>
-                        <a href="#">Design</a>
-                        <a href="#">Programming</a>
-                        <a href="#">Data</a>
-                        <a href="#">Computer Office</a>
-                        <a href="#">Network</a>
-                    </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html">Contact</a></li>
-            </ul> -->
             <button class="theme-toggle-btn" id="themeToggle">
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
             <div class="navbtn">
-                <button id="loginbtn">Login</button>
                 <button id="registerbtn">Register</button>
             </div>
 
@@ -239,6 +222,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="project.html">
+                            Project
+                        </a>
+                    </li>
+                    <li>
                         <a href="contact.html">
                             Contact
                         </a>
@@ -246,7 +234,6 @@
                 </ul>
             </nav>
             <div class="drawer-btns">
-                <button class="drawer-login">Login</button>
                 <button class="drawer-register">Register</button>
             </div>
         </div>
@@ -500,73 +487,58 @@
         <!-- ═══ COURSE CARDS ═══ -->
         <div class="card-areaa">
             <h3 id="blogsection">About Blog Videos <span>›</span></h3>
-            <p id="blog_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id repellendus
-                ipsa ipsam nulla. Quibusdam sint quisquam placeat.</p>
+            <p id="blog_description">Explore our video blog to discover expert tips, inspiring stories, and practical ideas designed to help you grow and stay informed.</p>
             <div class="wrapperr">
                 <div class="box-area">
-                    <div class="boxx" class="active">
+                    <a href="blog-detail.html" class="boxx active">
                         <img src="./asset/images/about-video5.webp" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/about-video1.png" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/about-video1.webp" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/about-video3.webp" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/about-video4.webp" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/whatisweb3.jpg" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
-                    <div class="boxx">
+                    </a>
+                    <a href="blog-detail.html" class="boxx">
                         <img src="./asset/images/dataanalyze.webp" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
-
-                            <!-- <a href="#">Learn More</a> -->
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1008,7 +980,22 @@
             applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });
     </script>
+    
     <script>
+
+        /* ── Nav Active State (works across separate HTML pages) ── */
+        const navLinks = document.querySelectorAll('.header > ul > li > a');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+
         /* ── Hamburger Drawer ── */
         const hamburger = document.getElementById('hamburger');
         const drawer = document.getElementById('mobileDrawer');

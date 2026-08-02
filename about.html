@@ -93,13 +93,13 @@
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="project.html">Project</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="theme-toggle-btn" id="themeToggle">
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
             <div class="navbtn">
-                <button id="loginbtn">Login</button>
                 <button id="registerbtn">Register</button>
             </div>
 
@@ -212,6 +212,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="project.html">
+                            Project
+                        </a>
+                    </li>
+                    <li>
                         <a href="blog.html">
                             Blog
                         </a>
@@ -263,35 +268,6 @@
                         </p>
                         <span>Mr. Nhanh Nhim</span>
                         <p id="color-p">Director & Founder of ICT Professional Training Center</p>
-                    </div>
-                </div>
-            </div>
-             <!-- ═══ CATEGORY ICONS ═══ -->
-            <div class="catagoryicon">
-                <div class="mainboxicon">
-                    <div class="boxcategory">
-                        <i class="fa-solid fa-user-graduate"></i>
-                            <p id="activest">2,500+</p>
-                            <p class="clp">Active Student</p>
-                            <span>Learners from diverse backgrounds growing together with us.</span>
-                    </div>
-                    <div class="boxcategory">
-                        <i class="fa-solid fa-person-chalkboard"></i>
-                        <p id="professionaltea">1,200+</p>
-                        <p class="clp">Professional Teacher</p>
-                        <span>Experienced educations dedicated to guiding your success.</span>
-                    </div>
-                    <div class="boxcategory">
-                        <i class="fa-solid fa-file-code"></i>
-                        <p id="languagesavail">28+</p>
-                        <p class="clp">Languages Available</p>
-                        <span>A wide range of proggramming languages and technologies to learn.</span>
-                    </div>
-                    <div class="boxcategory">
-                        <i class="fa-regular fa-calendar-days"></i>
-                        <p id="trainingevents">320+</p>
-                        <p class="clp">Training Event</p>
-                        <span>Workshop, webinars and bootcamps to boost your skills.</span>
                     </div>
                 </div>
             </div>
@@ -481,7 +457,7 @@
         <!-- ── Level 2: Manager ── -->
         <div class="mid-card">
             <img src="/asset/images/staff/vasotheavy-Deputy-director.jpg" alt="Mrs.So Theavy">
-            <h3>Mrs.So Theavy</h3>
+            <h3>Mrs.Va Sotheavy</h3>
             <p class="role">Deputy Director of ICT</p>
         </div>
         <div class="line-down"></div>
@@ -1093,6 +1069,17 @@
             });
         </script>
         <script>
+            /* ── Nav Active State (works across separate HTML pages) ── */
+            const navLinks = document.querySelectorAll('.header > ul > li > a');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
             /* ── Hamburger Drawer ── */
             const hamburger = document.getElementById('hamburger');
             const drawer = document.getElementById('mobileDrawer');
