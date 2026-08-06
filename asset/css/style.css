@@ -546,6 +546,9 @@
      background: #0f172a;
      color: #f1f5f9;
 }
+[data-theme="dark"] footer{
+     background-color: #31334a;
+}
  [data-theme="dark"] .header a, .dropbtn{
      color: #f1f5f9;
 }
@@ -570,6 +573,10 @@
  [data-theme="dark"] .mainbox {
      background: #0f172a;
 }
+[data-theme="dark"] .boxcard {
+     background: #1e293b;
+     color: white;
+}
  [data-theme="dark"] .search {
      background: #0f172a;
 }
@@ -585,8 +592,13 @@
  [data-theme="dark"] .fav-share {
      color: #0f172a;
 }
- [data-theme="dark"] .boxcard h5 {
-     color: #0f172a;
+
+ [data-theme="dark"] .boxcard .weekschedule .hour {
+     color: white;
+}
+
+ [data-theme="dark"] .boxcard .pweekly {
+     color: white;
 }
  [data-theme="dark"] .timeline::before {
      border: 1px solid #eff0f1;
@@ -603,14 +615,27 @@
  [data-theme="dark"] .portfolio-stats{
      color: rgb(230, 229, 229);
 }
+ [data-theme="dark"] .why-choose-ict .aboutus-detail-block .box-category{
+    background-color: #1E293B;
+}
+[data-theme="dark"] .why-choose-ict .aboutus-detail-block .box-category p{
+    color: #e6e6e7;
+}
+[data-theme="dark"] .boxcategory .fa-file-code {
+     color: rgb(216, 7, 235);
+}
+[data-theme="dark"] .boxcategory .fa-calendar-days {
+      color: rgb(2, 199, 32);
+}
 /* ── THEME TOGGLE BUTTON ── */
  .theme-toggle-btn {
      width: 40px;
      height: 40px;
-     border-radius: 10px;
+     border-radius: 50%;
      margin-left: auto;
-     border: 1.5px solid var(--nav-border);
+     border: 1.5px solid rgb(225, 222, 222);
      background: var(--toggle-bg);
+     box-shadow: 0 0 10px 0 rgb(186, 185, 185);
      color: var(--toggle-color);
      font-size: 1rem;
      display: flex;
@@ -770,6 +795,18 @@
          margin-top: -20px;
     }
 }
+
+/* Advertisement slide  */
+.avertisement-slide{
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 40px;
+    border-radius: 120px;
+}
+.avertisement-slide .carousel-inner{
+    border-radius: 30px;        
+}
 /*CATEGORY ICONS*/
  .catagoryicon {
      width: 100%;
@@ -807,7 +844,6 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     box-shadow: inset 0 0 10px 0 #bababa80;
      border-radius: 10px;
 }
  .boxcategory .fa-user-graduate {
@@ -815,41 +851,38 @@
      padding: 10px;
      */
      color: rgb(255, 157, 0);
-     font-size: 43px;
+     font-size: 55px;
+
 }
  .boxcategory .fa-person-chalkboard {
      color: blue;
-     font-size: 43px;
+     font-size: 55px;
 }
  .boxcategory .fa-file-code {
      color: rgb(110, 8, 119);
-     font-size: 43px;
+     font-size: 55px;
 }
  .boxcategory .fa-calendar-days {
      color: rgb(7, 131, 26);
-     font-size: 43px;
+     font-size: 55px;
 }
  .boxcategory #activest{
      font-size: 24px;
-     color: orange;
     /* border-bottom: 2px solid orange;
      */
 }
  .boxcategory #professionaltea{
      font-size: 24px;
-     color: blue;
     /* border-bottom: 2px solid blue;
      */
 }
  .boxcategory #languagesavail{
      font-size: 24px;
-     color: purple;
     /* border-bottom: 2px solid purple;
      */
 }
  .boxcategory #trainingevents{
      font-size: 24px;
-     color: green;
     /* border-bottom: 2px solid green;
      */
 }
@@ -866,13 +899,15 @@
      font-family: var(--font-body);
 }
  .mainboxicon .boxcategory .clp {
-     font-size: 18px;
+     font-size: 14px;
+     color: grey;
+     margin-top: -18px;
      font-weight: 600;
      font-family: var(--font-body);
 }
 /* Hero section */
  .showpage {
-     width: 90%;
+     width: 93%;
      margin: auto;
      border-radius: 20px;
      height: 540px;
@@ -983,7 +1018,7 @@
 /* Search */
  .search {
      margin: 30px 0;
-     width: 98%;
+     width: 99%;
      height: 90px;
      display: flex;
      justify-content: space-between;
@@ -991,7 +1026,7 @@
 }
  .search h2 {
      font-size: 30px;
-     margin-left: 70px;
+     margin-left: 55px;
      color: black;
      font-family: var(--font-body);
      font-weight: 700;
@@ -1001,24 +1036,37 @@
      align-items: center;
      margin-right: 35px;
      gap: 10px;
+     height: 50px;
+     background-color: White;
+     border-radius: 22px;
+     /* border: 1px solid rgb(103, 102, 102); */
+     box-shadow: 0 0 5px rgba(18, 19, 20, 0.5);
 }
  .search .searchbox #seainput {
-     width: 290px;
-     height: 38px;
-     padding: 0 15px;
-     font-family: var(--font-body);
-     border-radius: 20px;
-     font-size: 15px;
-     border: 1px solid #ccc;
-     outline: none;
-     margin-top: 16px;
+    border: none;
+    width: 290px;
+    height: 38px;
+    background-color: white;
+    /* padding: 0 15px; */
+    font-family: var(--font-body);
+    border-radius: 15px;
+    font-size: 18px;
+    outline: none;
+    color: #000;
+    margin-top: 16px;
 }
- .search .searchbox #seainput:focus {
-     box-shadow: 0 0 5px rgba(18, 19, 20, 0.5);
+ /* .search .searchbox:focus {
+    
+} */
+.searchbox .fa-magnifying-glass{
+    padding: 8px;
+    color: black;
+    margin-right: 10px;
+    font-size: 20px;
 }
 /* COURSE SLIDER */
  .allcoursebox {
-     width: 90%;
+     width: 93%;
      height: 120px;
      padding: 10px 0;
      display: flex;
@@ -1026,7 +1074,7 @@
      justify-content: center;
      align-items: center;
      background-color: rgb(71,108,220);
-     border-radius: 10px;
+     border-radius: 18px;
      overflow: hidden;
 }
  .coursebox {
@@ -1068,49 +1116,52 @@
      margin: 0;
      padding: 5px;
 }
- .acb .fa-solid {
+ .acb .fa-solid, .ti {
      color: black;
+}
+.acb .ti{
+    font-size: 20px;
 }
 /* COURSE CARDS */
  .mainbox {
      margin-top: 30px;
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     gap: 25px;
+     gap: 30px;
      padding: 20px;
-     width: 94%;
+     width: 96%;
      margin: 0 auto;
 }
  .boxcard {
      max-width: 100%;
      position: relative;
      padding: 5px;
-     box-shadow: 0 0 5px rgba(18, 19, 20, 0.5);
-     background: #fff;
-     border: 1px solid #cacacb;
-     border-radius: 12px;
+     box-shadow: 0 0 10px 0 grey;
+     background: #fcfdfe;
+     /* border: 1px solid #cacacb; */
+     border-radius: 25px;
      overflow: hidden;
      text-decoration: none;
      color: inherit;
      display: flex;
      flex-direction: column;
-     transition: box-shadow 0.2s;
+     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
  .boxcard:hover {
-     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-     border: 1px solid rgb(206, 205, 205);
+     transform: translateY(-6px);
+     box-shadow: 0 0 10px 0 rgb(187, 185, 185);
 }
  .boxcard > img {
      max-width: 100%;
      height: auto;
+     padding: 10px;
     /* width: 100%;
      */
      aspect-ratio: 4 / 2.6;
     /*new important*/
     /* height: 165px;
      */
-     background: #e5e7eb;
-     border-radius: 10px;
+     border-radius: 32px;
 }
  .boxcard .teacher {
      display: flex;
@@ -1126,25 +1177,23 @@
      width: 35px;
      height: 35px;
      border-radius: 50%;
-     padding: 1px;
      object-fit: cover;
      border: 1px solid rgb(157, 157, 160);
      flex-shrink: 0;
 }
  .teacher p {
      padding: 1% 5px;
-     color: black;
      font-family: var(--font-body);
      font-weight: 600;
      font-size: 16px;
-     margin-top: 9px;
+     margin-top: 18px;
     /* padding: 3px;
      */
 }
  .boxcard .teacher button {
      position: absolute;
-     top: 8px;
-     right: 8px;
+     top: 24px;
+     right: 24px;
      z-index: 1;
      padding: 1% 8px;
      width: auto;
@@ -1163,12 +1212,10 @@
      width: 88%;
      height: 37px;
      font-family: var(--font-body);
-     color: #0d0d0d;
      margin: 10px 15px 0;
      font-size: 18px;
 }
  .weekschedule {
-     color: black;
      display: flex;
      align-items: center;
      margin: 14px;
@@ -1196,16 +1243,16 @@
      flex-shrink: 0;
      display: flex;
      align-items: center;
-     width: 100%;
+     width: 96%;
      height: 40px;
      background-color: #1f325c;
-     border-radius: 5px;
+     border-radius: 15px;
      padding: 0 8px;
      margin-bottom: 2px;
     /* flex-shrink: 0;
      button never shrinks */
      cursor: pointer;
-     margin-top: 10px;
+     margin: 0 auto 10px;
 }
  .prnrate h3 {
      font-family: var(--font-body);
@@ -1228,7 +1275,22 @@
 }
 /* end .mainbox section block */
  .wrapperr {
-     padding: 10px 10%;
+     padding: 10px 6%;
+}
+ .box-area {
+     display: flex;
+     flex-wrap: nowrap;
+     gap: 60px;
+     margin-top: 50px;
+     overflow-x: auto;
+     padding: 10px 0 20px;
+     scroll-behavior: smooth;
+    /* Firefox */
+     scrollbar-width: none;
+    /* IE & Edge */
+     -ms-overflow-style: none;
+     width: calc(100% + 80px);
+     margin-left: -40px;
 }
  .card-areaa {
     /* background-color: #0f172a;
@@ -1353,7 +1415,7 @@
      padding: 10px;
 }
  .aboutschool {
-     width: 96%;
+     width: 94%;
      height: 450px;
      display: flex;
      align-items: center;
@@ -1388,27 +1450,28 @@
      width: 260px;
      height: 110px;
      padding: 10px;
-     border: 1px solid rgb(224, 221, 221);
      border-radius: 10px;
      display: flex;
-     flex-direction: column;
+     /* flex-direction: column; */
      justify-content: start;
      position: relative;
-     box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2);
+     gap: 10px;
+     /* box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.2); */
 }
- .typecategory .fa-regular.fa-clock, .typecategory .fa-solid.fa-users, .typecategory .fa-solid.fa-diagram-project, .typecategory .fa-solid.fa-award {
+ /* .typecategory .fa-regular.fa-clock, .typecategory .fa-solid.fa-users, .typecategory .fa-solid.fa-diagram-project, .typecategory .fa-solid.fa-award {
      justify-content: center;
      align-items: center;
      display: flex;
-}
+} */
  .typecategory .aboutdescri {
      font-family: var(--font-body);
      font-weight: 600;
      font-size: 12px;
-     text-align: center;
+     /* text-align: center; */
 }
  .typecategory i {
      font-size: 14px;
+     background-color: #bfcfff;
 }
  .aboutschool img {
      width: 100%;
@@ -1471,6 +1534,13 @@
      justify-content: center;
      align-items: center;
      gap: 20px;
+}
+.iconwithtext .fa-circle-check{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.teacherictblock .expert-instructor{
+    color:#212cc7;
 }
 /*Teacher section*/
  .teacher-cards-grid {
@@ -1674,7 +1744,6 @@
      margin-top: -22px;
 }
  .brand-row {
-     color: #2d3136;
      display: flex;
      align-items: center;
      gap: 12px;
@@ -1690,7 +1759,6 @@
      font-weight: 800;
 }
  .brand-tagline {
-     color: #2d3136;
      font-size: .9rem;
     /* color: var(--muted);
      */
@@ -1712,7 +1780,6 @@
 }
 /* Nav cols */
  .footer-col h4 {
-     color: #2d3136;
      font-size: 12px;
      font-weight: 700;
      letter-spacing: .12em;
@@ -1730,10 +1797,8 @@
 }
  .footer-col ul li {
      font-size: .92rem;
-     color: #2d3136;
 }
  .footer-col ul li a {
-     color: #2d3136;
      text-decoration: none;
      font-size: .92rem;
      display: flex;
@@ -1756,7 +1821,6 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     color: #2d3136;
     /* color: var(--blue-light);
      */
      font-size: .82rem;
@@ -1765,7 +1829,6 @@
 }
  .contact-text {
      font-size: .9rem;
-     color: #2d3136;
     /* color: var(--muted);
      */
      line-height: 1.5;
@@ -1782,7 +1845,6 @@
      font-weight: 700;
      letter-spacing: .12em;
      text-transform: uppercase;
-     color: #2d3136;
     /* color: var(--white);
      */
      margin-bottom: 12px;
@@ -1790,7 +1852,6 @@
      padding-bottom: 12px;
 }
  .app-desc {
-     color: #2d3136;
      font-size: .88rem;
     /* color: var(--muted);
      */
@@ -1839,22 +1900,46 @@
      margin-top: 12px;
 }
 /*=================================== Start contact CSS ======================================*/
+.contact-top-banner{
+    width: 100%;
+    height: 240px;
+    background-color: #10172A;
+    background-image:linear-gradient(135deg, rgba(1, 22, 39, 0.92), rgba(1, 12, 24, 0.7)),
+        url(/asset/images/advertisement/advertisement-slideshow\(2\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ .contact-top-banner #contacth2 {
+    font-family: var(--font-heading);
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+     /* margin-bottom: 10px; */
+}
+.contact-top-banner #contactp {
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    margin-top: -60px;
+    /* padding-top: 10px; */
+    width: 55%;
+}
  .messagenhotline {
      gap: 20px;
      display: flex;
+     padding-top: 50px;
     /* max-width: 600px;
      */
      width: 90%;
      margin: auto;
-}
- .container #contacth2 {
-     margin-top: 50px;
-     text-align: center;
-     margin-bottom: 10px;
-}
- .container #contactp {
-     text-align: center;
-     margin-bottom: 30px;
 }
  .message-block {
      box-shadow: 0 7px 15px rgba(0,0,0,0.1);
@@ -2290,7 +2375,6 @@
      font-family: var(--font-body);
      border-radius: 24px;
      overflow: hidden;
-     background: #fff;
      box-shadow: 0 0 10px 0 rgb(210, 210, 210);
 }
  .detail-body .boxcard img {
@@ -2368,23 +2452,23 @@
      width: 90%;
      height: 30px;
      border-radius: 5px;
-     margin-top: 10px;
+     margin-top: -15px;
      display: flex;
      padding-left: 3px;
      gap: 4px;
 }
  .detail-body .boxcard .certificate-completed i {
      margin-top: 6px;
-     color: black;
+     color: rgb(114, 113, 113);
      font-size: 20px;
      padding-right: 1px;
 }
  .detail-body .boxcard .certificate-completed p {
-     font-size: 17px;
-     margin-top: 2px;
+     font-size: 16px;
+     margin-top: 3px;
      font-weight: 600;
      height: 2px;
-     color: rgb(75, 74, 74);
+     color: rgb(114, 113, 113);
 }
  #includes-course{
      font-weight: 600;
@@ -2392,11 +2476,11 @@
      margin-top: 10px;
      height: 30px;
 }
- .hour-with-icon{
+ .detail-body .hour-with-icon{
      display: flex;
      gap: 6px;
      height: 20px;
-     margin-top: -10px;
+     margin-top: 10px;
      i{
          font-size: 18px;
          margin-top: 4px;
@@ -2920,6 +3004,11 @@
 /*==================================== End detailcourse ====================================*/
 /*==================================== Start allcoursedetail.css ====================================*/
  .all-course-header {
+    background-image:linear-gradient(135deg, rgba(1, 22, 39, 0.92), rgba(1, 12, 24, 0.7)),
+        url(/asset/images/advertisement/advertisement-slideshow\(2\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
      width: 100%;
      height: 265px;
      background-color: #012142;
@@ -3044,9 +3133,7 @@
      width: 100%;
      display: flex;
      flex-direction: column;
-     background-color: #ffffff;
      border: 1px solid #e5e7eb;
-     border-radius: 12px;
      overflow: hidden;
      text-decoration: none;
      color: inherit;
@@ -3102,9 +3189,14 @@
 }
  .about-container .text-about-description {
      width: 100%;
-     height: 200px;
+     height: 240px;
      background-color: #012142;
-     padding-top: 40px;
+     background-image:linear-gradient(135deg, rgba(1, 22, 39, 0.92), rgba(1, 12, 24, 0.7)),
+        url(/asset/images/advertisement/advertisement-slideshow\(2\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+     padding-top: 50px;
 }
  .about-container .text-about-description h1 {
      font-family: var(--font-body);
@@ -3251,7 +3343,7 @@
      bottom: 0;
      left: 50%;
      width: 2px;
-     border: 1px solid #0c0c0c;
+     border: 2px solid #bebdbd;
     ;
     /* background: #3f3ff7;
      */
@@ -3410,7 +3502,7 @@
      color: black;
 }
  .card-text p {
-     color: black;
+     color: rgb(105, 105, 105);
      width: 100%;
      font-size: 13px;
      line-height: 1.5;
@@ -3441,25 +3533,41 @@
  .why-choose-ict .aboutus-detail-block .box-category {
     /* background-color: #edf2f9;
      */
+     background-color: rgb(245, 247, 253);
      padding: 20px;
      border-radius: 16px;
-     box-shadow: inset 0 0 11px 0 rgb(203, 202, 202);
+     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
  .why-choose-ict .aboutus-detail-block .box-category h5 {
     /* color: #000;
      */
+     margin-top: 30px;
      font-weight: 700;
 }
  .why-choose-ict .aboutus-detail-block .box-category i {
     /* color: #000;
      */
+     color: rgb(71,108,220);
+     box-shadow: 0 0 5px 0 rgb(194, 194, 194);
+     border-radius: 10px;
+     background-color: white;
      font-size: 22px;
      padding: 10px;
+     transition: color 0.25s ease, transform 0.25s ease;
 }
-/* .why-choose-ict .aboutus-detail-block .box-category p {
-     color: #0d0d0d;
+ .why-choose-ict .aboutus-detail-block .box-category:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 0 10px 0 rgb(180, 180, 180);
+     /* box-shadow: 0 18px 36px rgba(28, 39, 63, 0.12); */
+ }
+ .why-choose-ict .aboutus-detail-block .box-category:hover i {
+     transform: translateY(-2px);
+ }
+ .why-choose-ict .aboutus-detail-block .box-category p {
+     color: #6f6e6e;
+     font-size: 14px;
 }
- */
+
  .section-title {
      text-align: center;
      margin-top: 60px;
@@ -4088,11 +4196,11 @@
      justify-content: center;
 }
  .our-gallery-block .our-gallery-category .tab button {
-     padding: 9px;
-     border: 1px solid rgb(214, 211, 211);
-     width: 170px;
+    padding: 10px 20px;
+     border: 1px solid rgb(177, 174, 174);
      font-weight: 600;
-     border-radius: 20px;
+     font-size: 16px;
+     border-radius: 23px;
 }
 /* Change background color of buttons on hover */
  .our-gallery-block .our-gallery-category .tab button:hover {
@@ -4620,13 +4728,6 @@
          width: 100%;
          height: 720px;
     }
-     .showpage {
-         width: 90%;
-         margin: 0 auto;
-    }
-     .aboutschool {
-         width: 75%;
-    }
      .vc-caption {
          width: 100%;
          margin-left: 160px;
@@ -4936,10 +5037,9 @@
          width: 48%;
          height: 220px;
          padding: 20px 10px;
-         border-bottom: 1px solid #f0f0f0;
     }
      .mainboxicon .boxcategory i {
-         font-size: 30px;
+         font-size: 40px;
     }
     /* ── Hero — vertical stack ── */
      .showpage {
@@ -5267,7 +5367,7 @@
          font-size: 13px;
     }
      .mainboxicon .boxcategory i {
-         font-size: 25px !important;
+         font-size: 35px !important;
     }
      .boxcategory #activest, .boxcategory #professionaltea, .boxcategory #languagesavail, .boxcategory #trainingevents{
          font-size: 15px;
