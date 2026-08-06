@@ -22,15 +22,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <!-- In your <head> -->
+    <!-- Flatpickr (date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Choices.js (clean select dropdowns) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="header">
             <div class="schoollogo">
+
                 <!-- a tag with logo and tittle -->
                 <a href="index.html">
-                    <img src="./asset/images/ICTLogo9.jpg" alt="navimg" title="Go to Home page">
+                    <img src="./asset/images/ICTLogo9.jpg" alt="navimg">
                 </a>
                 <h2>ICT PROFESSIONAL<br><span> TRAINING CENTER</span></h2>
             </div>
@@ -52,8 +59,8 @@
                                     <a href="course-detail.html">DevOps</a>
                                     <a href="course-detail.html">Project Managerment</a>
                                     <a href="course-detail.html">Software Development with Python</a>
+                                    <a href="course-detail.html">Software Development with C++</a>
                                     <a href="course-detail.html">Software Development with Java</a>
-                                    <a href="course-detail.html">Software Development with Python</a>
                                 </div>
                             </div>
                             <div class="has-submenu">
@@ -73,7 +80,6 @@
                                     <a href="course-detail.html">Video Editor</a>
                                 </div>
                             </div>
-
                             <div class="has-submenu">
                                 <a href="#">Data <span>›</span></a>
                                 <div class="submenu">
@@ -102,7 +108,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </li>
                 <li><a href="about.html">About</a></li>
@@ -110,6 +115,8 @@
                 <li><a href="project.html">Project</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
+
             <button class="theme-toggle-btn" id="themeToggle">
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
@@ -124,6 +131,7 @@
                 <span></span>
             </button>
         </div>
+
         <!-- ═══ MOBILE DRAWER ═══ -->
         <div class="mobile-drawer" id="mobileDrawer">
             <div class="acc-img">
@@ -155,6 +163,7 @@
                                 <li><a href="course-detail.html">Software Development with Python</a></li>
                             </ul>
                         </li>
+
                         <!-- Posts (has dropdown) -->
                         <li>
                             <div class="menu-item" onclick="toggleMenu(this)">
@@ -168,7 +177,6 @@
                                 <li><a href="course-detail.html">Web Backend (Node js)</a></li>
                             </ul>
                         </li>
-
                         <li>
                             <div class="menu-item" onclick="toggleMenu(this)">
                                 Design
@@ -180,8 +188,6 @@
                                 <li><a href="course-detail.html">Video Editor</a></li>
                             </ul>
                         </li>
-
-
                         <li>
                             <div class="menu-item" onclick="toggleMenu(this)">
                                 Data Course
@@ -195,7 +201,6 @@
                                 <li><a href="course-detail.html">Power BI</a></li>
                             </ul>
                         </li>
-
                         <li>
                             <div class="menu-item" onclick="toggleMenu(this)">
                                 Computer Office
@@ -227,18 +232,16 @@
                             About
                         </a>
                     </li>
-
-                    <li>
-                        <a href="blog.html">
-                            Blog
-                        </a>
-                    </li>
                     <li>
                         <a href="project.html">
                             Project
                         </a>
                     </li>
-
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
                     <li>
                         <a href="contact.html">
                             Contact
@@ -247,7 +250,6 @@
                 </ul>
             </nav>
             <div class="drawer-btns">
-                <button class="drawer-login">Login</button>
                 <button class="drawer-register">Register</button>
             </div>
         </div>
