@@ -31,10 +31,16 @@
     <style>
         .blog-header {
             width: 100%;
-            height: 180px;
-            background-color: #012142;
+            height: 240px;
+            background-color: #000203;
+            background-image:
+                linear-gradient(135deg, rgba(1, 22, 39, 0.92), rgba(1, 12, 24, 0.7)),
+                url(/asset/images/advertisement/advertisement-slideshow\(2\).webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             color: #ffffff;
-            padding-top: 30px;
+            padding-top: 66px;
         }
 
         .blog-header h1 {
@@ -67,7 +73,7 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            height: 360px;
+            height: 500px;
             margin-bottom: 40px;
             border: none;
         }
@@ -93,7 +99,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 30px 40px;
+            padding: 40px 50px;
         }
 
         .badge-feature {
@@ -282,6 +288,17 @@
             margin-top: 40px;
             justify-content: center;
             align-items: center;
+        }
+        .avertisement-slide{
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            padding: 40px;
+            border-radius: 120px;
+        }
+        .avertisement-slide .carousel-inner{
+            border-radius: 30px;
+            
         }
 
         /* .more-blog .blog-number-page{
@@ -867,7 +884,7 @@
                 <div class="blog-card-section" data-aos="fade-up" data-aos-delay="0">
                     <div class="card-img-blog">
                         <span class="badge-category">Technology</span>
-                        <img src="asset/images/Backend_dev.webp" alt="Blog thumbnail">
+                        <img src="asset/images/Course-Language/Backend_dev.webp" alt="Blog thumbnail">
                     </div>
                     <div class="card-body-blog">
                         <h3>Prepare for a Successful ICT Career</h3>
@@ -884,7 +901,7 @@
                 <div class="blog-card-section" data-aos="fade-up" data-aos-delay="60">
                     <div class="card-img-blog">
                         <span class="badge-category">Technology</span>
-                        <img src="asset/images/networkAdvance.webp" alt="Blog thumbnail">
+                        <img src="asset/images/Course-Language/networkAdvance.webp" alt="Blog thumbnail">
                     </div>
                     <div class="card-body-blog">
                         <h3>How to build strong networking skills</h3>
@@ -900,7 +917,7 @@
                 <div class="blog-card-section" data-aos="fade-up" data-aos-delay="120">
                     <div class="card-img-blog">
                         <span class="badge-category">Technology</span>
-                        <img src="asset/images/software-development-with-java.webp" alt="Blog thumbnail">
+                        <img src="asset/images/Course-Language/software-development-with-java.webp" alt="Blog thumbnail">
                     </div>
                     <div class="card-body-blog">
                         <h3>Start Your Technology Journey Today</h3>
@@ -981,6 +998,30 @@
                 <div class="page-btn">5</div>
                 <div class="page-btn">&#10095;</div>
             </div>
+
+            <div class="avertisement-slide">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="/asset/images/slide-cut-v1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="/asset/images/slide-cut-v7.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/asset/images/ICT_SlideShow.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- =======================================blog-code-=====end===================================== -->
@@ -991,7 +1032,7 @@
                 <div class="footer-brand">
                     <div class="brand-row">
                         <img class="footerimg" src="./asset/images/ICTLogo9.jpg" alt="2">
-                        <span class="brand-name">ICT Center</span>
+                        <span class="brand-name">ICT Professional Training Center</span>
                     </div>
                     <p class="brand-tagline">Empowering professionals through world-class ICT education since 2020.</p>
                     <div class="socials">
