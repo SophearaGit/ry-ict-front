@@ -753,7 +753,7 @@
         </div>
         <div class="aboutschool">
             <div class="text" data-aos="fade-right">
-                <p>WHY CHOOSE US</p>
+                <p id="WCU">WHY CHOOSE US</p>
                 <h3>The Best Platform to Learn New Skills</h3>
                 <p>We provide everything you need to succeed in your learning journey. Our platform is designed to make
                     learning effective and enjoyable.</p>
@@ -1124,29 +1124,36 @@
             </div>
         </section>
 
-        <div class="avertisement-slide">
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="4000">
-                            <img src="/asset/images/slide-cut-v1.jpg" class="d-block w-100" alt="...">
+        <!-- ═══ AD POPUP MODAL (shows once on page load) ═══ -->
+        <div class="ad-popup-overlay" id="adPopupOverlay">
+            <div class="ad-popup-box">
+                <button class="ad-popup-close" id="adPopupClose">&times;</button>
+
+                <div class="avertisement-slide">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="/asset/images/slide-cut-v24.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="/asset/images/slide-cut-v15.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/asset/images/ICT_SlideShow.jpg" class="d-block w-100" alt="...">
+                            </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="4000">
-                            <img src="/asset/images/slide-cut-v7.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/asset/images/ICT_SlideShow.jpg" class="d-block w-100" alt="...">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
+        </div>
 
         <!-- footer section -->
         <footer>
@@ -1257,6 +1264,25 @@
     </script>
 
     <script>
+
+        /* ── Ad Popup Modal: auto-show on load, close on X or overlay click ── */
+        window.addEventListener('load', () => {
+            const adPopup = document.getElementById('adPopupOverlay');
+            if (adPopup) {
+                setTimeout(() => adPopup.classList.add('show'), 400); // small delay feels less jarring
+            }
+        });
+
+        document.getElementById('adPopupClose').addEventListener('click', () => {
+            document.getElementById('adPopupOverlay').classList.remove('show');
+        });
+
+        document.getElementById('adPopupOverlay').addEventListener('click', (e) => {
+            // only close if the dark background itself was clicked, not the popup content
+            if (e.target.id === 'adPopupOverlay') {
+                e.currentTarget.classList.remove('show');
+            }
+        });
 
         /* ── Nav Active State (works across separate HTML pages) ── */
         const navLinks = document.querySelectorAll('.header > ul > li > a');
