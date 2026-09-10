@@ -121,7 +121,8 @@
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
             <div class="navbtn">
-                <button id="registerbtn">Register</button>
+                <a href="login.html"><button id="loginbtn">Login</button></a>
+                <a href="register.html"><button id="registerbtn">Register</button></a>
             </div>
 
             <!-- Hamburger (mobile only) -->
@@ -250,7 +251,8 @@
                 </ul>
             </nav>
             <div class="drawer-btns">
-                <button class="drawer-register">Register</button>
+                <a href="login.html"><button class="drawer-login">Login</button></a>
+                <a href="register.html"><button class="drawer-register">Register</button></a>
             </div>
         </div>
 
@@ -328,7 +330,7 @@
                 </div>
             </div>
             <div class="imgdescript" data-aos="fade-left" data-aos-delay="150">
-                <img src="./asset/images/slide-cut-v1.jpg" alt="Hero Image">
+                <img src="./asset/images/Gallery-aboutus/slide-cut-v1.jpg" alt="Hero Image">
             </div>
         </div>
 
@@ -779,7 +781,7 @@
                         </div>
                     </a>
                     <a href="blog-detail.html" class="boxx">
-                        <img src="./asset/images/Blog/Screenshot 2026-08-06 142918.png" alt="">
+                        <img src="./asset/images/Blog/test-mobile-device.jpg" alt="">
                         <div class="overlay">
                             <p>Phat Sopheaktra</p>
                             <h3>What is Web Development?</h3>
@@ -811,28 +813,16 @@
                             your portfolio with coding exercises.</p>
                     </div>
                     <div class="typecategory">
-                        <i class="fa-solid fa-award"></i>
+                        <i class="fa-solid fa-certificate"></i>
                         <p class="aboutdescri"><i>Certificates</i><br>Earn verified certificates upon completion. Share
                             on LinkedIn and your resume.</p>
                     </div>
                 </div>
             </div>
             <div class="imgaboutschool" data-aos="fade-left" data-aos-delay="150">
-                <img src="./asset/images/photo_2026-04-30_15-36-55.jpg" alt="About Us Image">
+                <img src="./asset/images/Gallery-aboutus/photo_2026-04-30_15-36-55.jpg" alt="About Us Image">
             </div>
         </div>
-
-        <!-- CEO founder of ICT Solutions Co,Ltd -->
-        <!-- <div class="teacher-img-with-description" data-aos="zoom-in">
-            <img id="imageteacher-nhim" src="./asset/images/teacherNhim.jpg" alt="">
-
-            <div class="teacher-nhim-text-descript">
-                <p>Mr.NHANH NHIM</p>
-                <span>CEO & Founder of ICT Solutions,Co,Ltd.</span>
-                <h3>"Our mission is to empower the next generation of digital innovators with the tools they need to
-                    change the world."</h3>
-            </div>
-        </div> -->
         <div class="message-teacher-block" data-aos="fade-up">
                 <div class="message-by-kru-nhim">
                     <img id="message-by-kru-nhim-img" src="/asset/images/kru-nhim2.JPG" alt="">
@@ -1170,13 +1160,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="4000">
-                                <img src="/asset/images/slide-cut-v24.jpg" class="d-block w-100" alt="...">
+                                <img src="/asset/images/Gallery-aboutus/slide-cut-v24.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item" data-bs-interval="4000">
-                                <img src="/asset/images/slide-cut-v15.jpg" class="d-block w-100" alt="...">
+                                <img src="/asset/images/Gallery-aboutus/slide-cut-v15.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/asset/images/ICT_SlideShow.jpg" class="d-block w-100" alt="...">
+                                <img src="/asset/images/Gallery-aboutus/ICT_SlideShow.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -1265,6 +1255,13 @@
                     </div>
                     <div>
                         <img src="./asset/images/footer/playstore.svg" alt="">
+                    </div>
+                     <div class="payment-accept">
+                        <span class="payment-accept-label">We accept:</span>
+                        <div class="payment-accept-logos">
+                            <img src="./asset/images/aba-footer-pay.jpg" alt="ABA Pay" class="payment-badge">
+                            <img src="./asset/images/khqr-footer-payment.jpg" alt="KHQR" class="payment-badge">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1375,14 +1372,25 @@
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('open');
             drawer.classList.toggle('open');
-            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+            const isOpen = drawer.classList.contains('open');
+            document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+            document.body.style.overflow = isOpen ? 'clip' : '';
         });
-        drawer.querySelectorAll('a').forEach(a => {
+       drawer.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
                 hamburger.classList.remove('open');
                 drawer.classList.remove('open');
+                document.documentElement.style.overflow = '';
                 document.body.style.overflow = '';
             });
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('open');
+                drawer.classList.remove('open');
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+            }
         });
         var i = 0;
         var a = setInterval(function () {
